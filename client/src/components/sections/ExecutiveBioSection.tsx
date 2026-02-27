@@ -57,7 +57,7 @@ const BARRY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/gi
 
 export function ExecutiveBioSection() {
   return (
-    <section id="leadership" className="relative py-28 lg:py-36 bg-[oklch(0.1706_0.0284_267.36)] grain-overlay overflow-hidden">
+    <section id="leadership" className="relative py-28 lg:py-36 bg-[oklch(0.2177_0.0356_251.29)] grain-overlay overflow-hidden">
       {/* Brand pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -90,7 +90,7 @@ export function ExecutiveBioSection() {
                   alt="Barry Howton, CEO of Accelerate CFO"
                   className="w-full aspect-[3/4] object-cover object-top grayscale-[20%] contrast-[1.05]"
                 />
-                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[oklch(0.1706_0.0284_267.36)] to-transparent h-24" />
+                <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[oklch(0.2177_0.0356_251.29)] to-transparent h-24" />
               </div>
               <p className="font-sans text-[0.65rem] text-[oklch(0.42_0.02_285)] mt-3 tracking-wide">
                 Photo: David Lundgren
@@ -121,7 +121,7 @@ export function ExecutiveBioSection() {
               {/* Credentials Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {barryCredentials.map((cred, i) => (
-                  <div key={i} className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-5">
+                  <div key={i} className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-5">
                     <div className="flex items-center gap-3">
                       <cred.icon className="w-5 h-5 text-[oklch(0.7432_0.1171_89.51)] shrink-0" strokeWidth={1.5} />
                       <div>
@@ -180,7 +180,7 @@ export function ExecutiveBioSection() {
               {/* Credentials Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {nathanCredentials.map((cred, i) => (
-                  <div key={i} className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-5">
+                  <div key={i} className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-5">
                     <div className="flex items-center gap-3">
                       <cred.icon className="w-5 h-5 text-[oklch(0.7432_0.1171_89.51)] shrink-0" strokeWidth={1.5} />
                       <div>
@@ -199,7 +199,7 @@ export function ExecutiveBioSection() {
 
             {/* Monogram / Visual Block */}
             <div className="lg:col-span-4 order-1 lg:order-2">
-              <div className="relative bg-[oklch(0.2177_0.0356_251.29)] border border-[oklch(0.7432_0.1171_89.51_/_0.15)] aspect-[3/4] flex items-center justify-center">
+              <div className="relative bg-[oklch(0.2659_0.0559_254.82)] border border-[oklch(0.7432_0.1171_89.51_/_0.15)] aspect-[3/4] flex items-center justify-center">
                 {/* Icon mark as visual element */}
                 <div className="text-center">
                   <img

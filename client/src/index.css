@@ -4,19 +4,17 @@
 @custom-variant dark (&:is(.dark *));
 
 /*
- * ACCELERATE CFO — Brand Kit Color Mapping
- * =========================================
- * Vault Black:      #0A0F1C → oklch(0.1706 0.0284 267.36)
- * 24K Gold:         #C9A84C → oklch(0.7432 0.1171 89.51)
- * Parchment Cream:  #F5F0E8 → oklch(0.9568 0.0119 79.78)
- * Deep Navy:        #0D1B2A → oklch(0.2177 0.0356 251.29)
- * Muted Gold:       #8B7332 → oklch(0.565 0.0889 88.97)
- * Warm Ivory:       #FAFAF5 → oklch(0.9837 0.0066 106.52)
- * Charcoal:         #1A1A2E → oklch(0.2284 0.0384 282.93)
- * Success Green:    #2D6A4F → oklch(0.4758 0.0777 162.16)
- * Alert Amber:      #D4A843 → oklch(0.7534 0.1274 84.93)
- * Error Red:        #9B2226 → oklch(0.4544 0.1568 24.59)
- * Muted Text:       #8A8A9A → oklch(0.6387 0.0237 285.71)
+ * ACCELERATE CFO — Brand Kit Color Mapping (Navy-First)
+ * =====================================================
+ * PRIMARY BACKGROUND:  Deep Navy #0D1B2A → oklch(0.2177 0.0356 251.29)
+ * Card/Elevated:       Navy Card #112640 → oklch(0.2659 0.0559 254.82)
+ * Input/Muted:         Navy Muted #1A2A40 → oklch(0.2823 0.0462 256.56)
+ * Border:              Navy Border #1B3557 → oklch(0.3266 0.0687 255.83)
+ * Navbar/Footer:       Darkest Navy #0A1525 → oklch(0.1947 0.0363 257.71)
+ * 24K Gold:            #C9A84C → oklch(0.7432 0.1171 89.51)
+ * Parchment Cream:     #F5F0E8 → oklch(0.9568 0.0119 79.78)
+ * Muted Gold:          #8B7332 → oklch(0.565 0.0889 88.97)
+ * Warm Ivory:          #FAFAF5 → oklch(0.9837 0.0066 106.52)
  */
 
 @theme inline {
@@ -62,52 +60,47 @@
   --color-gold: oklch(0.7432 0.1171 89.51);
   --color-gold-light: oklch(0.82 0.1 89.51);
   --color-gold-dark: oklch(0.565 0.0889 88.97);
-  /* Brand Kit — Backgrounds */
+  /* Brand Kit — Navy Backgrounds */
   --color-navy: oklch(0.2177 0.0356 251.29);
-  --color-navy-deep: oklch(0.1706 0.0284 267.36);
-  --color-navy-light: oklch(0.2284 0.0384 282.93);
+  --color-navy-deep: oklch(0.1947 0.0363 257.71);
+  --color-navy-light: oklch(0.2659 0.0559 254.82);
   /* Brand Kit — Text & Light */
   --color-ivory: oklch(0.9568 0.0119 79.78);
   --color-ivory-dark: oklch(0.9837 0.0066 106.52);
-  --color-charcoal: oklch(0.2284 0.0384 282.93);
-  /* Brand Kit — Functional */
-  --color-success: oklch(0.4758 0.0777 162.16);
-  --color-amber: oklch(0.7534 0.1274 84.93);
-  --color-error: oklch(0.4544 0.1568 24.59);
-  --color-muted-text: oklch(0.6387 0.0237 285.71);
+  --color-charcoal: oklch(0.2823 0.0462 256.56);
 }
 
 :root {
   --radius: 0.25rem;
-  /* Background: Vault Black #0A0F1C */
-  --background: oklch(0.1706 0.0284 267.36);
+  /* Background: Deep Navy #0D1B2A — matches business card */
+  --background: oklch(0.2177 0.0356 251.29);
   /* Foreground: Parchment Cream #F5F0E8 */
   --foreground: oklch(0.9568 0.0119 79.78);
-  /* Card: Deep Navy #0D1B2A */
-  --card: oklch(0.2177 0.0356 251.29);
+  /* Card: Navy Card #112640 — slightly lighter than bg */
+  --card: oklch(0.2659 0.0559 254.82);
   --card-foreground: oklch(0.9568 0.0119 79.78);
-  /* Popover: Deep Navy */
-  --popover: oklch(0.2177 0.0356 251.29);
+  /* Popover: Navy Card */
+  --popover: oklch(0.2659 0.0559 254.82);
   --popover-foreground: oklch(0.9568 0.0119 79.78);
   /* Primary: 24K Gold #C9A84C */
   --primary: oklch(0.7432 0.1171 89.51);
-  --primary-foreground: oklch(0.1706 0.0284 267.36);
-  /* Secondary: Deep Navy */
-  --secondary: oklch(0.2177 0.0356 251.29);
+  --primary-foreground: oklch(0.2177 0.0356 251.29);
+  /* Secondary: Navy Muted #1A2A40 */
+  --secondary: oklch(0.2823 0.0462 256.56);
   --secondary-foreground: oklch(0.9568 0.0119 79.78);
-  /* Muted: Charcoal #1A1A2E */
-  --muted: oklch(0.2284 0.0384 282.93);
+  /* Muted: Navy Muted */
+  --muted: oklch(0.2823 0.0462 256.56);
   --muted-foreground: oklch(0.6387 0.0237 285.71);
-  /* Accent: Deep Navy */
-  --accent: oklch(0.2177 0.0356 251.29);
+  /* Accent: Navy Card */
+  --accent: oklch(0.2659 0.0559 254.82);
   --accent-foreground: oklch(0.7432 0.1171 89.51);
-  /* Destructive: Error Red #9B2226 */
+  /* Destructive */
   --destructive: oklch(0.4544 0.1568 24.59);
   --destructive-foreground: oklch(0.9837 0.0066 106.52);
-  /* Border: slightly lighter than Charcoal */
-  --border: oklch(0.28 0.03 267);
-  /* Input: Charcoal */
-  --input: oklch(0.2284 0.0384 282.93);
+  /* Border: Navy Border #1B3557 */
+  --border: oklch(0.3266 0.0687 255.83);
+  /* Input: Navy Muted */
+  --input: oklch(0.2823 0.0462 256.56);
   /* Ring: 24K Gold */
   --ring: oklch(0.7432 0.1171 89.51);
   /* Charts: Gold gradient scale */
@@ -116,14 +109,14 @@
   --chart-3: oklch(0.48 0.07 89);
   --chart-4: oklch(0.4 0.06 89);
   --chart-5: oklch(0.32 0.04 89);
-  /* Sidebar: Vault Black */
-  --sidebar: oklch(0.1706 0.0284 267.36);
+  /* Sidebar: Darkest Navy */
+  --sidebar: oklch(0.1947 0.0363 257.71);
   --sidebar-foreground: oklch(0.9568 0.0119 79.78);
   --sidebar-primary: oklch(0.7432 0.1171 89.51);
-  --sidebar-primary-foreground: oklch(0.1706 0.0284 267.36);
-  --sidebar-accent: oklch(0.2177 0.0356 251.29);
+  --sidebar-primary-foreground: oklch(0.2177 0.0356 251.29);
+  --sidebar-accent: oklch(0.2659 0.0559 254.82);
   --sidebar-accent-foreground: oklch(0.9568 0.0119 79.78);
-  --sidebar-border: oklch(0.28 0.03 267);
+  --sidebar-border: oklch(0.3266 0.0687 255.83);
   --sidebar-ring: oklch(0.7432 0.1171 89.51);
 }
 
@@ -186,7 +179,7 @@
     }
   }
 
-  /* Section label styling — luxury spaced uppercase */
+  /* Section label styling */
   .section-label {
     font-family: var(--font-sans);
     font-weight: 700;
@@ -214,10 +207,10 @@
     box-shadow: 0 20px 40px oklch(0 0 0 / 0.3);
   }
 
-  /* Cream document section — Parchment Cream #F5F0E8 */
+  /* Cream document section */
   .document-section {
     background: oklch(0.9568 0.0119 79.78);
-    color: oklch(0.2284 0.0384 282.93);
+    color: oklch(0.2177 0.0356 251.29);
   }
   .document-section h2,
   .document-section h3,
@@ -233,7 +226,7 @@
     position: relative;
     overflow: hidden;
     background: oklch(0.7432 0.1171 89.51);
-    color: oklch(0.1706 0.0284 267.36);
+    color: oklch(0.2177 0.0356 251.29);
     font-family: var(--font-sans);
     font-weight: 700;
     letter-spacing: 0.05em;
@@ -296,15 +289,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar — Vault Black track, gold hover */
+/* Custom scrollbar — Deep Navy track, gold hover */
 ::-webkit-scrollbar {
   width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: oklch(0.1706 0.0284 267.36);
+  background: oklch(0.2177 0.0356 251.29);
 }
 ::-webkit-scrollbar-thumb {
-  background: oklch(0.32 0.03 267);
+  background: oklch(0.3266 0.0687 255.83);
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {

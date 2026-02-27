@@ -29,7 +29,7 @@ const ABSTRACT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/g
 
 export function TaxLegalSection() {
   return (
-    <section className="relative py-28 lg:py-36 bg-[oklch(0.08_0.02_260)] overflow-hidden">
+    <section className="relative py-28 lg:py-36 bg-[oklch(0.1947_0.0363_257.71)] overflow-hidden">
       {/* Subtle background image */}
       <div className="absolute inset-0 opacity-[0.07]">
         <img src={ABSTRACT_IMG} alt="" className="w-full h-full object-cover" />
@@ -52,7 +52,7 @@ export function TaxLegalSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Tax Column */}
           <AnimatedSection delay={0.1}>
-            <div className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-8 lg:p-12 h-full">
+            <div className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-8 lg:p-12 h-full">
               <div className="flex items-center gap-4 mb-8">
                 <Shield className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)]" strokeWidth={1.5} />
                 <h3 className="font-serif text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)]">
@@ -74,7 +74,7 @@ export function TaxLegalSection() {
 
           {/* Legal Column */}
           <AnimatedSection delay={0.2}>
-            <div className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-8 lg:p-12 h-full">
+            <div className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-8 lg:p-12 h-full">
               <div className="flex items-center gap-4 mb-8">
                 <Scale className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)]" strokeWidth={1.5} />
                 <h3 className="font-serif text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)]">

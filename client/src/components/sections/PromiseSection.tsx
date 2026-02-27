@@ -42,7 +42,7 @@ export function PromiseSection() {
           alt="Sunrise over pastoral landscape with church steeple"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[oklch(0.1706_0.0284_267.36_/_0.85)]" />
+        <div className="absolute inset-0 bg-[oklch(0.2177_0.0356_251.29_/_0.85)]" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">

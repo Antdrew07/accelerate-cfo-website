@@ -4,7 +4,7 @@ const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/
 
 export function Footer() {
   return (
-    <footer className="relative bg-[oklch(0.04_0.01_260)] border-t border-[oklch(0.7432_0.1171_89.51_/_0.08)] overflow-hidden">
+    <footer className="relative bg-[oklch(0.1947_0.0363_257.71)] border-t border-[oklch(0.7432_0.1171_89.51_/_0.08)] overflow-hidden">
       {/* Subtle brand pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"

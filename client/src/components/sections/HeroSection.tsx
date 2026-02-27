@@ -24,9 +24,9 @@ export function HeroSection() {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay gradient — left side darker for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.1706_0.0284_267.36_/_0.92)] via-[oklch(0.1706_0.0284_267.36_/_0.8)] to-[oklch(0.1706_0.0284_267.36_/_0.55)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.2177_0.0356_251.29_/_0.92)] via-[oklch(0.2177_0.0356_251.29_/_0.8)] to-[oklch(0.2177_0.0356_251.29_/_0.55)]" />
         {/* Bottom gradient for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.1706_0.0284_267.36)] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.2177_0.0356_251.29)] via-transparent to-transparent" />
         {/* Brand pattern overlay */}
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"

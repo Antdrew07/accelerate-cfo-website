@@ -27,7 +27,7 @@ function StatusIcon({ active }: { active: boolean }) {
 
 export function DifferentiationSection() {
   return (
-    <section id="why-us" className="relative py-28 lg:py-36 bg-[oklch(0.1706_0.0284_267.36)] grain-overlay overflow-hidden">
+    <section id="why-us" className="relative py-28 lg:py-36 bg-[oklch(0.2177_0.0356_251.29)] grain-overlay overflow-hidden">
       {/* Brand pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -72,7 +72,7 @@ export function DifferentiationSection() {
                 {capabilities.map((cap, i) => (
                   <tr
                     key={cap.name}
-                    className={`border-b border-[oklch(0.28_0.03_267)] transition-colors hover:bg-[oklch(0.2177_0.0356_251.29)]`}
+                    className={`border-b border-[oklch(0.3266_0.0687_255.83)] transition-colors hover:bg-[oklch(0.2659_0.0559_254.82)]`}
                   >
                     <td className="font-sans text-sm text-[oklch(0.8_0.005_85)] py-5 pr-4">
                       {cap.name}

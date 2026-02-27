@@ -96,7 +96,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
   return (
     <AnimatedSection delay={index * 0.08}>
-      <div className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-8 lg:p-10 h-full">
+      <div className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-8 lg:p-10 h-full">
         <service.icon className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)] mb-5" strokeWidth={1.5} />
         <h3 className="font-serif text-xl lg:text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)] mb-2">
           {service.title}
@@ -133,7 +133,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
 export function ServiceLinesSection() {
   return (
-    <section id="services" className="relative py-28 lg:py-36 bg-[oklch(0.1706_0.0284_267.36)] grain-overlay overflow-hidden">
+    <section id="services" className="relative py-28 lg:py-36 bg-[oklch(0.2177_0.0356_251.29)] grain-overlay overflow-hidden">
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="mb-16 text-center max-w-3xl mx-auto">

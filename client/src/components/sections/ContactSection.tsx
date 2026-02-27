@@ -24,7 +24,7 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="relative py-28 lg:py-36 bg-[oklch(0.04_0.01_260)] overflow-hidden">
+    <section id="contact" className="relative py-28 lg:py-36 bg-[oklch(0.1947_0.0363_257.71)] overflow-hidden">
       {/* Brand pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -63,7 +63,7 @@ export function ContactSection() {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  className="w-full bg-[oklch(0.2177_0.0356_251.29)] border border-[oklch(0.28_0.03_267)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
+                  className="w-full bg-[oklch(0.2659_0.0559_254.82)] border border-[oklch(0.3266_0.0687_255.83)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
                   placeholder="Your name"
                 />
               </div>
@@ -76,7 +76,7 @@ export function ContactSection() {
                   required
                   value={formData.email}
                   onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                  className="w-full bg-[oklch(0.2177_0.0356_251.29)] border border-[oklch(0.28_0.03_267)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
+                  className="w-full bg-[oklch(0.2659_0.0559_254.82)] border border-[oklch(0.3266_0.0687_255.83)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
                   placeholder="your@email.com"
                 />
               </div>
@@ -88,7 +88,7 @@ export function ContactSection() {
                   type="tel"
                   value={formData.phone}
                   onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                  className="w-full bg-[oklch(0.2177_0.0356_251.29)] border border-[oklch(0.28_0.03_267)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
+                  className="w-full bg-[oklch(0.2659_0.0559_254.82)] border border-[oklch(0.3266_0.0687_255.83)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
                   placeholder="(555) 000-0000"
                 />
               </div>
@@ -100,7 +100,7 @@ export function ContactSection() {
                   type="text"
                   value={formData.church}
                   onChange={(e) => setFormData({ ...formData, church: e.target.value })}
-                  className="w-full bg-[oklch(0.2177_0.0356_251.29)] border border-[oklch(0.28_0.03_267)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
+                  className="w-full bg-[oklch(0.2659_0.0559_254.82)] border border-[oklch(0.3266_0.0687_255.83)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors"
                   placeholder="Your church name"
                 />
               </div>
@@ -114,7 +114,7 @@ export function ContactSection() {
                 rows={4}
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                className="w-full bg-[oklch(0.2177_0.0356_251.29)] border border-[oklch(0.28_0.03_267)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors resize-none"
+                className="w-full bg-[oklch(0.2659_0.0559_254.82)] border border-[oklch(0.3266_0.0687_255.83)] text-[oklch(0.9568_0.0119_79.78)] font-sans text-sm px-5 py-4 focus:border-[oklch(0.7432_0.1171_89.51)] focus:outline-none transition-colors resize-none"
                 placeholder="What financial challenges is your church facing?"
               />
             </div>
