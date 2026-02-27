@@ -40,7 +40,7 @@ export function SolutionSection() {
             <p className="section-label mb-4">The Solution</p>
             <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
               Executive-Level Financial Leadership —{" "}
-              <span className="text-[oklch(0.65_0.12_85)]">Without the Full-Time Cost</span>
+              <span className="text-[oklch(0.565_0.0889_88.97)]">Without the Full-Time Cost</span>
             </h2>
           </AnimatedSection>
 
@@ -49,7 +49,7 @@ export function SolutionSection() {
               <p className="font-sans text-base text-[oklch(0.35_0.01_260)] leading-relaxed mb-6">
                 Accelerate CFO is a fractional CFO firm built exclusively for churches and nonprofits. We bring 40+ years of combined financial, legal, and real estate expertise — so pastors can focus on ministry while we build the financial infrastructure that makes it sustainable.
               </p>
-              <div className="h-[1px] bg-gradient-to-r from-[oklch(0.65_0.12_85)] via-[oklch(0.65_0.12_85_/_0.3)] to-transparent max-w-[120px]" />
+              <div className="h-[1px] bg-gradient-to-r from-[oklch(0.565_0.0889_88.97)] via-[oklch(0.65_0.12_85_/_0.3)] to-transparent max-w-[120px]" />
             </div>
           </AnimatedSection>
         </div>
@@ -59,10 +59,10 @@ export function SolutionSection() {
           {/* Large Counter */}
           <AnimatedSection className="lg:col-span-1">
             <div ref={counterRef} className="flex flex-col items-center lg:items-start justify-center h-full">
-              <span className="font-serif text-7xl lg:text-8xl font-bold text-[oklch(0.65_0.12_85)] leading-none">
+              <span className="font-serif text-7xl lg:text-8xl font-bold text-[oklch(0.565_0.0889_88.97)] leading-none">
                 {yearsCount}+
               </span>
-              <span className="font-sans text-sm tracking-[0.15em] uppercase text-[oklch(0.4_0.01_260)] mt-3">
+              <span className="font-sans text-sm tracking-[0.15em] uppercase text-[oklch(0.42_0.02_285)] mt-3">
                 Years Combined Experience
               </span>
             </div>
@@ -71,12 +71,12 @@ export function SolutionSection() {
           {/* 3 Pillars */}
           {pillars.map((pillar, i) => (
             <AnimatedSection key={pillar.title} delay={0.1 + i * 0.1}>
-              <div className="border-t-2 border-[oklch(0.65_0.12_85)] pt-8 h-full">
-                <pillar.icon className="w-7 h-7 text-[oklch(0.65_0.12_85)] mb-5" strokeWidth={1.5} />
-                <h3 className="font-serif text-xl font-bold text-[oklch(0.12_0.025_260)] mb-3">
+              <div className="border-t-2 border-[oklch(0.565_0.0889_88.97)] pt-8 h-full">
+                <pillar.icon className="w-7 h-7 text-[oklch(0.565_0.0889_88.97)] mb-5" strokeWidth={1.5} />
+                <h3 className="font-serif text-xl font-bold text-[oklch(0.2177_0.0356_251.29)] mb-3">
                   {pillar.title}
                 </h3>
-                <p className="font-sans text-sm text-[oklch(0.4_0.01_260)] leading-relaxed">
+                <p className="font-sans text-sm text-[oklch(0.42_0.02_285)] leading-relaxed">
                   {pillar.description}
                 </p>
               </div>

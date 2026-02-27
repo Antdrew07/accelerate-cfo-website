@@ -43,7 +43,7 @@ export function EngageSection() {
           <p className="section-label mb-4">How We Engage</p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             A Simple, Scalable Model{" "}
-            <span className="text-[oklch(0.65_0.12_85)]">Designed for Churches</span>
+            <span className="text-[oklch(0.565_0.0889_88.97)]">Designed for Churches</span>
           </h2>
         </AnimatedSection>
 
@@ -55,22 +55,22 @@ export function EngageSection() {
                 {/* Timeline Column */}
                 <div className="flex flex-col items-center shrink-0">
                   {/* Node */}
-                  <div className="w-10 h-10 rounded-full border-2 border-[oklch(0.65_0.12_85)] flex items-center justify-center bg-[oklch(0.97_0.008_85)]">
-                    <span className="font-sans text-xs font-700 text-[oklch(0.65_0.12_85)]">{step.number}</span>
+                  <div className="w-10 h-10 rounded-full border-2 border-[oklch(0.565_0.0889_88.97)] flex items-center justify-center bg-[oklch(0.9568_0.0119_79.78)]">
+                    <span className="font-sans text-xs font-700 text-[oklch(0.565_0.0889_88.97)]">{step.number}</span>
                   </div>
                   {/* Line */}
                   {i < steps.length - 1 && (
-                    <div className="w-[1px] flex-1 min-h-[80px] bg-gradient-to-b from-[oklch(0.65_0.12_85)] to-[oklch(0.65_0.12_85_/_0.2)]" />
+                    <div className="w-[1px] flex-1 min-h-[80px] bg-gradient-to-b from-[oklch(0.565_0.0889_88.97)] to-[oklch(0.65_0.12_85_/_0.2)]" />
                   )}
                 </div>
 
                 {/* Content */}
                 <div className="pb-16 lg:pb-20 pt-1">
                   <div className="flex items-center gap-3 mb-3">
-                    <step.icon className="w-5 h-5 text-[oklch(0.65_0.12_85)]" strokeWidth={1.5} />
+                    <step.icon className="w-5 h-5 text-[oklch(0.565_0.0889_88.97)]" strokeWidth={1.5} />
                     <h3 className="font-serif text-xl lg:text-2xl font-bold">{step.title}</h3>
                   </div>
-                  <p className="font-sans text-sm text-[oklch(0.4_0.01_260)] leading-relaxed max-w-lg">
+                  <p className="font-sans text-sm text-[oklch(0.42_0.02_285)] leading-relaxed max-w-lg">
                     {step.description}
                   </p>
                 </div>

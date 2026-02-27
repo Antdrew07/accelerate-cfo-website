@@ -36,7 +36,7 @@ export function VenueRealEstateSection() {
           <p className="section-label mb-4">Venue & Real Estate</p>
           <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight mb-6">
             Find the Right Space.{" "}
-            <span className="text-[oklch(0.65_0.12_85)]">Build the Right Portfolio.</span>
+            <span className="text-[oklch(0.565_0.0889_88.97)]">Build the Right Portfolio.</span>
           </h2>
         </AnimatedSection>
 
@@ -46,15 +46,15 @@ export function VenueRealEstateSection() {
           <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-2 gap-8 lg:gap-12">
             {/* Venue Search */}
             <AnimatedSection delay={0.1}>
-              <div className="border-t-2 border-[oklch(0.65_0.12_85)] pt-8">
+              <div className="border-t-2 border-[oklch(0.565_0.0889_88.97)] pt-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <MapPin className="w-6 h-6 text-[oklch(0.65_0.12_85)]" strokeWidth={1.5} />
+                  <MapPin className="w-6 h-6 text-[oklch(0.565_0.0889_88.97)]" strokeWidth={1.5} />
                   <h3 className="font-serif text-xl font-bold">Venue Search & Location</h3>
                 </div>
                 <div className="space-y-4">
                   {venueItems.map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.12_85)] mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.565_0.0889_88.97)] mt-2 shrink-0" />
                       <span className="font-sans text-sm text-[oklch(0.35_0.01_260)] leading-relaxed">
                         {item}
                       </span>
@@ -66,15 +66,15 @@ export function VenueRealEstateSection() {
 
             {/* Real Estate Investment */}
             <AnimatedSection delay={0.2}>
-              <div className="border-t-2 border-[oklch(0.65_0.12_85)] pt-8">
+              <div className="border-t-2 border-[oklch(0.565_0.0889_88.97)] pt-8">
                 <div className="flex items-center gap-3 mb-6">
-                  <Building2 className="w-6 h-6 text-[oklch(0.65_0.12_85)]" strokeWidth={1.5} />
+                  <Building2 className="w-6 h-6 text-[oklch(0.565_0.0889_88.97)]" strokeWidth={1.5} />
                   <h3 className="font-serif text-xl font-bold">Real Estate & Investment</h3>
                 </div>
                 <div className="space-y-4">
                   {investmentItems.map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
-                      <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.65_0.12_85)] mt-2 shrink-0" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-[oklch(0.565_0.0889_88.97)] mt-2 shrink-0" />
                       <span className="font-sans text-sm text-[oklch(0.35_0.01_260)] leading-relaxed">
                         {item}
                       </span>

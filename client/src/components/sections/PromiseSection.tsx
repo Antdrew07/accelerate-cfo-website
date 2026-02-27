@@ -42,16 +42,16 @@ export function PromiseSection() {
           alt="Sunrise over pastoral landscape with church steeple"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-[oklch(0.06_0.015_260_/_0.85)]" />
+        <div className="absolute inset-0 bg-[oklch(0.1706_0.0284_267.36_/_0.85)]" />
       </div>
 
       <div className="relative z-10 max-w-5xl mx-auto px-6 lg:px-8 text-center">
         {/* Header */}
         <AnimatedSection>
           <p className="section-label mb-4">Our Promise</p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.97_0.008_85)] leading-tight mb-8 max-w-3xl mx-auto">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.9568_0.0119_79.78)] leading-tight mb-8 max-w-3xl mx-auto">
             We Exist to Help Pastors Accelerate What God Has Called Them{" "}
-            <span className="text-[oklch(0.75_0.12_85)]">to Do</span>
+            <span className="text-[oklch(0.7432_0.1171_89.51)]">to Do</span>
           </h2>
         </AnimatedSection>
 
@@ -68,11 +68,11 @@ export function PromiseSection() {
           {values.map((value, i) => (
             <AnimatedSection key={value.title} delay={0.3 + i * 0.1}>
               <div className="text-center">
-                <value.icon className="w-8 h-8 text-[oklch(0.75_0.12_85)] mx-auto mb-4" strokeWidth={1.5} />
-                <h3 className="font-serif text-lg font-bold text-[oklch(0.97_0.008_85)] mb-2">
+                <value.icon className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)] mx-auto mb-4" strokeWidth={1.5} />
+                <h3 className="font-serif text-lg font-bold text-[oklch(0.9568_0.0119_79.78)] mb-2">
                   {value.title}
                 </h3>
-                <p className="font-sans text-sm text-[oklch(0.55_0.01_260)]">
+                <p className="font-sans text-sm text-[oklch(0.55_0.02_285)]">
                   {value.description}
                 </p>
               </div>

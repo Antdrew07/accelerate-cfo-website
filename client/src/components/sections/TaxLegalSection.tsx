@@ -39,11 +39,11 @@ export function TaxLegalSection() {
         {/* Header */}
         <AnimatedSection className="mb-16 text-center max-w-3xl mx-auto">
           <p className="section-label mb-4">Tax & Legal Extension</p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.97_0.008_85)] leading-tight mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.9568_0.0119_79.78)] leading-tight mb-6">
             Protecting Pastors and{" "}
-            <span className="text-[oklch(0.75_0.12_85)]">Their Organizations</span>
+            <span className="text-[oklch(0.7432_0.1171_89.51)]">Their Organizations</span>
           </h2>
-          <p className="font-sans text-base text-[oklch(0.55_0.01_260)] leading-relaxed">
+          <p className="font-sans text-base text-[oklch(0.55_0.02_285)] leading-relaxed">
             We ensure pastors receive every lawful tax benefit while keeping the organization fully compliant.
           </p>
         </AnimatedSection>
@@ -52,18 +52,18 @@ export function TaxLegalSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Tax Column */}
           <AnimatedSection delay={0.1}>
-            <div className="gold-card bg-[oklch(0.1_0.02_260)] p-8 lg:p-12 h-full">
+            <div className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-8 lg:p-12 h-full">
               <div className="flex items-center gap-4 mb-8">
-                <Shield className="w-8 h-8 text-[oklch(0.75_0.12_85)]" strokeWidth={1.5} />
-                <h3 className="font-serif text-2xl font-bold text-[oklch(0.97_0.008_85)]">
+                <Shield className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)]" strokeWidth={1.5} />
+                <h3 className="font-serif text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)]">
                   Pastoral Tax Services
                 </h3>
               </div>
               <div className="space-y-5">
                 {taxServices.map((item, i) => (
                   <div key={i} className="flex items-start gap-4 group">
-                    <span className="w-6 h-[1px] bg-[oklch(0.75_0.12_85)] mt-3 shrink-0 group-hover:w-10 transition-all duration-300" />
-                    <span className="font-sans text-[oklch(0.65_0.01_260)] leading-relaxed">
+                    <span className="w-6 h-[1px] bg-[oklch(0.7432_0.1171_89.51)] mt-3 shrink-0 group-hover:w-10 transition-all duration-300" />
+                    <span className="font-sans text-[oklch(0.6387_0.0237_285.71)] leading-relaxed">
                       {item}
                     </span>
                   </div>
@@ -74,18 +74,18 @@ export function TaxLegalSection() {
 
           {/* Legal Column */}
           <AnimatedSection delay={0.2}>
-            <div className="gold-card bg-[oklch(0.1_0.02_260)] p-8 lg:p-12 h-full">
+            <div className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-8 lg:p-12 h-full">
               <div className="flex items-center gap-4 mb-8">
-                <Scale className="w-8 h-8 text-[oklch(0.75_0.12_85)]" strokeWidth={1.5} />
-                <h3 className="font-serif text-2xl font-bold text-[oklch(0.97_0.008_85)]">
+                <Scale className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)]" strokeWidth={1.5} />
+                <h3 className="font-serif text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)]">
                   Legal Extension Services
                 </h3>
               </div>
               <div className="space-y-5">
                 {legalServices.map((item, i) => (
                   <div key={i} className="flex items-start gap-4 group">
-                    <span className="w-6 h-[1px] bg-[oklch(0.75_0.12_85)] mt-3 shrink-0 group-hover:w-10 transition-all duration-300" />
-                    <span className="font-sans text-[oklch(0.65_0.01_260)] leading-relaxed">
+                    <span className="w-6 h-[1px] bg-[oklch(0.7432_0.1171_89.51)] mt-3 shrink-0 group-hover:w-10 transition-all duration-300" />
+                    <span className="font-sans text-[oklch(0.6387_0.0237_285.71)] leading-relaxed">
                       {item}
                     </span>
                   </div>

@@ -47,7 +47,7 @@ export function CFODeepDiveSection() {
               <h2 className="font-serif text-3xl sm:text-4xl font-bold leading-tight mb-6">
                 Executive Financial Infrastructure for Ministry Growth
               </h2>
-              <p className="font-sans text-base text-[oklch(0.4_0.01_260)] leading-relaxed mb-10">
+              <p className="font-sans text-base text-[oklch(0.42_0.02_285)] leading-relaxed mb-10">
                 Our fractional CFO offering mirrors what top-tier firms deliver — with the added advantage of integrated legal, real estate, and tax services under one roof. We position your church with the same financial rigor as a Fortune 500 company.
               </p>
 
@@ -55,7 +55,7 @@ export function CFODeepDiveSection() {
               <div className="space-y-4 mb-10">
                 {capabilities.map((item, i) => (
                   <div key={i} className="flex items-start gap-4">
-                    <CheckCircle2 className="w-5 h-5 text-[oklch(0.65_0.12_85)] mt-0.5 shrink-0" strokeWidth={1.5} />
+                    <CheckCircle2 className="w-5 h-5 text-[oklch(0.565_0.0889_88.97)] mt-0.5 shrink-0" strokeWidth={1.5} />
                     <span className="font-sans text-sm text-[oklch(0.3_0.01_260)] leading-relaxed">
                       {item}
                     </span>
@@ -63,7 +63,7 @@ export function CFODeepDiveSection() {
                 ))}
               </div>
 
-              <div className="h-[1px] bg-gradient-to-r from-[oklch(0.65_0.12_85)] via-[oklch(0.65_0.12_85_/_0.3)] to-transparent" />
+              <div className="h-[1px] bg-gradient-to-r from-[oklch(0.565_0.0889_88.97)] via-[oklch(0.65_0.12_85_/_0.3)] to-transparent" />
             </div>
           </AnimatedSection>
         </div>

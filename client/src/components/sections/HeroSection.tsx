@@ -24,9 +24,9 @@ export function HeroSection() {
           className="w-full h-full object-cover"
         />
         {/* Dark overlay gradient — left side darker for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.04_0.015_260_/_0.92)] via-[oklch(0.06_0.015_260_/_0.8)] to-[oklch(0.06_0.015_260_/_0.55)]" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.1706_0.0284_267.36_/_0.92)] via-[oklch(0.1706_0.0284_267.36_/_0.8)] to-[oklch(0.1706_0.0284_267.36_/_0.55)]" />
         {/* Bottom gradient for depth */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.06_0.015_260)] via-transparent to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.1706_0.0284_267.36)] via-transparent to-transparent" />
         {/* Brand pattern overlay */}
         <div
           className="absolute inset-0 opacity-[0.025] pointer-events-none"
@@ -63,15 +63,15 @@ export function HeroSection() {
 
           {/* Headline */}
           <AnimatedSection delay={0.4}>
-            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-[oklch(0.97_0.008_85)] mb-8">
+            <h1 className="font-serif text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight text-[oklch(0.9568_0.0119_79.78)] mb-8">
               Your Church Deserves a CFO Who Understands{" "}
-              <span className="text-[oklch(0.75_0.12_85)]">the Mission.</span>
+              <span className="text-[oklch(0.7432_0.1171_89.51)]">the Mission.</span>
             </h1>
           </AnimatedSection>
 
           {/* Subheadline */}
           <AnimatedSection delay={0.6}>
-            <p className="font-sans text-lg md:text-xl text-[oklch(0.75_0.01_260)] leading-relaxed max-w-2xl mb-10">
+            <p className="font-sans text-lg md:text-xl text-[oklch(0.7_0.02_285)] leading-relaxed max-w-2xl mb-10">
               Fractional CFO Services, Tax Strategy, Real Estate & Legal Infrastructure — Built Exclusively for Churches & Nonprofits.
             </p>
           </AnimatedSection>
@@ -92,11 +92,11 @@ export function HeroSection() {
           <AnimatedSection delay={1.0}>
             <div className="flex items-center gap-6">
               <div className="gold-rule flex-1 max-w-[60px]" />
-              <p className="font-sans text-xs tracking-[0.15em] uppercase text-[oklch(0.55_0.01_260)]">
+              <p className="font-sans text-xs tracking-[0.15em] uppercase text-[oklch(0.55_0.02_285)]">
                 40+ Years of Combined Experience
-                <span className="mx-3 text-[oklch(0.75_0.12_85)]">&bull;</span>
+                <span className="mx-3 text-[oklch(0.7432_0.1171_89.51)]">&bull;</span>
                 Faith-Driven
-                <span className="mx-3 text-[oklch(0.75_0.12_85)]">&bull;</span>
+                <span className="mx-3 text-[oklch(0.7432_0.1171_89.51)]">&bull;</span>
                 Kingdom-Focused
               </p>
             </div>
@@ -110,7 +110,7 @@ export function HeroSection() {
         animate={{ y: [0, 8, 0] }}
         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
       >
-        <div className="w-[1px] h-12 bg-gradient-to-b from-[oklch(0.75_0.12_85)] to-transparent" />
+        <div className="w-[1px] h-12 bg-gradient-to-b from-[oklch(0.7432_0.1171_89.51)] to-transparent" />
       </motion.div>
     </section>
   );

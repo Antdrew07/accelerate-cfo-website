@@ -26,7 +26,7 @@ export function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[oklch(0.06_0.015_260_/_0.85)] backdrop-blur-xl border-b border-[oklch(0.75_0.12_85_/_0.1)]"
+          ? "bg-[oklch(0.1706_0.0284_267.36_/_0.85)] backdrop-blur-xl border-b border-[oklch(0.7432_0.1171_89.51_/_0.1)]"
           : "bg-transparent"
       }`}
     >
@@ -52,7 +52,7 @@ export function Navbar() {
               <a
                 key={link.href}
                 href={link.href}
-                className="font-sans text-[0.75rem] font-600 tracking-[0.15em] uppercase text-[oklch(0.75_0.01_260)] hover:text-[oklch(0.75_0.12_85)] transition-colors duration-300"
+                className="font-sans text-[0.75rem] font-600 tracking-[0.15em] uppercase text-[oklch(0.7_0.02_285)] hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors duration-300"
               >
                 {link.label}
               </a>
@@ -68,7 +68,7 @@ export function Navbar() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden text-[oklch(0.75_0.12_85)]"
+            className="lg:hidden text-[oklch(0.7432_0.1171_89.51)]"
             aria-label="Toggle menu"
           >
             {mobileOpen ? <X size={24} /> : <Menu size={24} />}
@@ -78,14 +78,14 @@ export function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="lg:hidden bg-[oklch(0.08_0.02_260_/_0.98)] backdrop-blur-xl border-t border-[oklch(0.75_0.12_85_/_0.1)]">
+        <div className="lg:hidden bg-[oklch(0.08_0.02_260_/_0.98)] backdrop-blur-xl border-t border-[oklch(0.7432_0.1171_89.51_/_0.1)]">
           <div className="px-6 py-8 space-y-6">
             {navLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
                 onClick={() => setMobileOpen(false)}
-                className="block font-sans text-sm font-600 tracking-[0.15em] uppercase text-[oklch(0.75_0.01_260)] hover:text-[oklch(0.75_0.12_85)] transition-colors"
+                className="block font-sans text-sm font-600 tracking-[0.15em] uppercase text-[oklch(0.7_0.02_285)] hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors"
               >
                 {link.label}
               </a>

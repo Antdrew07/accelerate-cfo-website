@@ -4,7 +4,7 @@ const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/
 
 export function Footer() {
   return (
-    <footer className="relative bg-[oklch(0.04_0.01_260)] border-t border-[oklch(0.75_0.12_85_/_0.08)] overflow-hidden">
+    <footer className="relative bg-[oklch(0.04_0.01_260)] border-t border-[oklch(0.7432_0.1171_89.51_/_0.08)] overflow-hidden">
       {/* Subtle brand pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.04] pointer-events-none"
@@ -31,14 +31,14 @@ export function Footer() {
                 className="h-5 object-contain"
               />
             </div>
-            <p className="font-sans text-sm text-[oklch(0.55_0.01_260)] leading-relaxed max-w-xs">
+            <p className="font-sans text-sm text-[oklch(0.55_0.02_285)] leading-relaxed max-w-xs">
               Experienced Financial Leadership to Accelerate What God Has Called You to Do.
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-sans text-xs font-700 tracking-[0.2em] uppercase text-[oklch(0.75_0.12_85)] mb-6">
+            <h4 className="font-sans text-xs font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] mb-6">
               Quick Links
             </h4>
             <div className="space-y-3">
@@ -46,7 +46,7 @@ export function Footer() {
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="block font-sans text-sm text-[oklch(0.55_0.01_260)] hover:text-[oklch(0.75_0.12_85)] transition-colors duration-300"
+                  className="block font-sans text-sm text-[oklch(0.55_0.02_285)] hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors duration-300"
                 >
                   {item}
                 </a>
@@ -56,13 +56,13 @@ export function Footer() {
 
           {/* Contact */}
           <div>
-            <h4 className="font-sans text-xs font-700 tracking-[0.2em] uppercase text-[oklch(0.75_0.12_85)] mb-6">
+            <h4 className="font-sans text-xs font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] mb-6">
               Contact
             </h4>
-            <div className="space-y-3 font-sans text-sm text-[oklch(0.55_0.01_260)]">
+            <div className="space-y-3 font-sans text-sm text-[oklch(0.55_0.02_285)]">
               <p>Wesley Chapel, FL</p>
-              <a href="tel:2053811555" className="block hover:text-[oklch(0.75_0.12_85)] transition-colors">(205) 381-1555</a>
-              <a href="mailto:info@acceleratecfo.com" className="block hover:text-[oklch(0.75_0.12_85)] transition-colors">info@acceleratecfo.com</a>
+              <a href="tel:2053811555" className="block hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors">(205) 381-1555</a>
+              <a href="mailto:info@acceleratecfo.com" className="block hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors">info@acceleratecfo.com</a>
             </div>
           </div>
         </div>
@@ -70,10 +70,10 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="gold-rule mb-8" />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-sans text-xs text-[oklch(0.4_0.01_260)]">
+          <p className="font-sans text-xs text-[oklch(0.42_0.02_285)]">
             &copy; {new Date().getFullYear()} Accelerate CFO. All rights reserved.
           </p>
-          <p className="font-sans text-xs text-[oklch(0.4_0.01_260)] tracking-[0.1em]">
+          <p className="font-sans text-xs text-[oklch(0.42_0.02_285)] tracking-[0.1em]">
             40+ Years Experience &bull; Faith-Driven &bull; Kingdom-Focused
           </p>
         </div>

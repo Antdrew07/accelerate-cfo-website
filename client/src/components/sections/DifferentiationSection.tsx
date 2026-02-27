@@ -19,7 +19,7 @@ const capabilities = [
 
 function StatusIcon({ active }: { active: boolean }) {
   return active ? (
-    <Check className="w-5 h-5 text-[oklch(0.75_0.12_85)]" strokeWidth={2} />
+    <Check className="w-5 h-5 text-[oklch(0.7432_0.1171_89.51)]" strokeWidth={2} />
   ) : (
     <X className="w-5 h-5 text-[oklch(0.35_0.01_260)]" strokeWidth={1.5} />
   );
@@ -27,7 +27,7 @@ function StatusIcon({ active }: { active: boolean }) {
 
 export function DifferentiationSection() {
   return (
-    <section id="why-us" className="relative py-28 lg:py-36 bg-[oklch(0.06_0.015_260)] grain-overlay overflow-hidden">
+    <section id="why-us" className="relative py-28 lg:py-36 bg-[oklch(0.1706_0.0284_267.36)] grain-overlay overflow-hidden">
       {/* Brand pattern overlay */}
       <div
         className="absolute inset-0 opacity-[0.03] pointer-events-none"
@@ -41,9 +41,9 @@ export function DifferentiationSection() {
         {/* Header */}
         <AnimatedSection className="mb-16 text-center">
           <p className="section-label mb-4">Why Accelerate CFO</p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.97_0.008_85)] leading-tight mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.9568_0.0119_79.78)] leading-tight mb-6">
             One Firm. Every Financial Need.{" "}
-            <span className="text-[oklch(0.75_0.12_85)]">Kingdom Focus.</span>
+            <span className="text-[oklch(0.7432_0.1171_89.51)]">Kingdom Focus.</span>
           </h2>
           <div className="gold-rule max-w-[120px] mx-auto" />
         </AnimatedSection>
@@ -53,17 +53,17 @@ export function DifferentiationSection() {
           <div className="overflow-x-auto">
             <table className="w-full">
               <thead>
-                <tr className="border-b-2 border-[oklch(0.75_0.12_85)]">
-                  <th className="text-left font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.55_0.01_260)] py-5 pr-4">
+                <tr className="border-b-2 border-[oklch(0.7432_0.1171_89.51)]">
+                  <th className="text-left font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.55_0.02_285)] py-5 pr-4">
                     Capability
                   </th>
-                  <th className="text-center font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.55_0.01_260)] py-5 px-4 w-[140px]">
+                  <th className="text-center font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.55_0.02_285)] py-5 px-4 w-[140px]">
                     Typical CFO Firm
                   </th>
-                  <th className="text-center font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.55_0.01_260)] py-5 px-4 w-[140px]">
+                  <th className="text-center font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.55_0.02_285)] py-5 px-4 w-[140px]">
                     Typical Church CPA
                   </th>
-                  <th className="text-center font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.75_0.12_85)] py-5 pl-4 w-[160px]">
+                  <th className="text-center font-sans text-xs font-700 tracking-[0.15em] uppercase text-[oklch(0.7432_0.1171_89.51)] py-5 pl-4 w-[160px]">
                     Accelerate CFO
                   </th>
                 </tr>
@@ -72,7 +72,7 @@ export function DifferentiationSection() {
                 {capabilities.map((cap, i) => (
                   <tr
                     key={cap.name}
-                    className={`border-b border-[oklch(0.2_0.02_260)] transition-colors hover:bg-[oklch(0.1_0.02_260)]`}
+                    className={`border-b border-[oklch(0.28_0.03_267)] transition-colors hover:bg-[oklch(0.2177_0.0356_251.29)]`}
                   >
                     <td className="font-sans text-sm text-[oklch(0.8_0.005_85)] py-5 pr-4">
                       {cap.name}
@@ -87,7 +87,7 @@ export function DifferentiationSection() {
                         <StatusIcon active={cap.cpa} />
                       </div>
                     </td>
-                    <td className="text-center py-5 pl-4 bg-[oklch(0.75_0.12_85_/_0.05)]">
+                    <td className="text-center py-5 pl-4 bg-[oklch(0.7432_0.1171_89.51_/_0.05)]">
                       <div className="flex justify-center">
                         <StatusIcon active={cap.accelerate} />
                       </div>
@@ -101,7 +101,7 @@ export function DifferentiationSection() {
 
         {/* Bottom Statement */}
         <AnimatedSection delay={0.4} className="mt-12">
-          <p className="font-serif text-base italic text-[oklch(0.55_0.01_260)] text-center max-w-2xl mx-auto leading-relaxed">
+          <p className="font-serif text-base italic text-[oklch(0.55_0.02_285)] text-center max-w-2xl mx-auto leading-relaxed">
             No other firm serving churches integrates CFO services, tax, legal, venue search, and real estate investment under one relationship.
           </p>
         </AnimatedSection>

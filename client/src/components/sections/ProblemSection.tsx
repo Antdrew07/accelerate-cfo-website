@@ -37,9 +37,9 @@ export function ProblemSection() {
         {/* Header */}
         <AnimatedSection className="mb-16 max-w-3xl">
           <p className="section-label mb-4">The Problem</p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.97_0.008_85)] leading-tight mb-6">
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.9568_0.0119_79.78)] leading-tight mb-6">
             Most Churches Are Financially Underserved{" "}
-            <span className="text-[oklch(0.75_0.12_85)]">and Overexposed</span>
+            <span className="text-[oklch(0.7432_0.1171_89.51)]">and Overexposed</span>
           </h2>
           <div className="gold-rule max-w-[120px]" />
         </AnimatedSection>
@@ -48,9 +48,9 @@ export function ProblemSection() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 mb-12">
           {problems.map((problem, i) => (
             <AnimatedSection key={problem.title} delay={i * 0.1}>
-              <div className="gold-card bg-[oklch(0.1_0.02_260)] p-8 lg:p-10 h-full">
-                <problem.icon className="w-8 h-8 text-[oklch(0.75_0.12_85)] mb-6" strokeWidth={1.5} />
-                <h3 className="font-serif text-xl lg:text-2xl font-bold text-[oklch(0.97_0.008_85)] mb-4">
+              <div className="gold-card bg-[oklch(0.2177_0.0356_251.29)] p-8 lg:p-10 h-full">
+                <problem.icon className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)] mb-6" strokeWidth={1.5} />
+                <h3 className="font-serif text-xl lg:text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)] mb-4">
                   {problem.title}
                 </h3>
                 <p className="font-sans text-[oklch(0.6_0.01_260)] leading-relaxed">
@@ -63,7 +63,7 @@ export function ProblemSection() {
 
         {/* Bottom Quote */}
         <AnimatedSection>
-          <p className="font-serif text-lg italic text-[oklch(0.75_0.12_85)] text-center max-w-2xl mx-auto">
+          <p className="font-serif text-lg italic text-[oklch(0.7432_0.1171_89.51)] text-center max-w-2xl mx-auto">
             Pastors were called to shepherd — not to be their own CFO, attorney, and real estate advisor.
           </p>
         </AnimatedSection>
