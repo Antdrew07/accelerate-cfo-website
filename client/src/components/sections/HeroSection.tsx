@@ -2,16 +2,16 @@
  * Design: "The Vault" — Dark Editorial Luxury
  * Hero: Cinematic full-viewport with diagonal split feel
  * Typography: EB Garamond headlines, Source Sans 3 body
- * Colors: True black bg, gold accents, ivory text
- * Brand: Icon mark watermark, brand pattern overlay
+ * Colors: Deep navy bg, gold accents, ivory text
+ * Brand: Finalized circle logo watermark, chevron pattern overlay
  */
 
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { motion } from "framer-motion";
 
 const HERO_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/hero-skyline-UUdRwQgMaiuw8vRThwgFcY.webp";
-const ICON_MARK = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-icon-mark-9oQXfiLfCWcdBX6nMqvJnG.webp";
-const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-pattern-c8kwd3myRUP9zeadcbsnNo.webp";
+const LOGO_CIRCLE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-circle-logo_83362397.png";
+const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-chevron-pattern_0089c0eb.png";
 
 export function HeroSection() {
   return (
@@ -27,9 +27,9 @@ export function HeroSection() {
         <div className="absolute inset-0 bg-gradient-to-r from-[oklch(0.2177_0.0356_251.29_/_0.92)] via-[oklch(0.2177_0.0356_251.29_/_0.8)] to-[oklch(0.2177_0.0356_251.29_/_0.55)]" />
         {/* Bottom gradient for depth */}
         <div className="absolute inset-0 bg-gradient-to-t from-[oklch(0.2177_0.0356_251.29)] via-transparent to-transparent" />
-        {/* Brand pattern overlay */}
+        {/* Finalized brand chevron pattern overlay */}
         <div
-          className="absolute inset-0 opacity-[0.025] pointer-events-none"
+          className="absolute inset-0 opacity-[0.08] pointer-events-none"
           style={{
             backgroundImage: `url(${BRAND_PATTERN})`,
             backgroundSize: "600px 600px",
@@ -38,14 +38,14 @@ export function HeroSection() {
         />
       </div>
 
-      {/* Floating icon mark watermark — right side */}
+      {/* Floating circle logo watermark — right side */}
       <motion.div
-        className="absolute right-[-5%] top-1/2 -translate-y-1/2 opacity-[0.04] pointer-events-none hidden lg:block"
+        className="absolute right-[-5%] top-1/2 -translate-y-1/2 opacity-[0.06] pointer-events-none hidden lg:block"
         animate={{ y: [-10, 10, -10] }}
         transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
       >
         <img
-          src={ICON_MARK}
+          src={LOGO_CIRCLE}
           alt=""
           className="w-[500px] h-[500px] object-contain"
         />

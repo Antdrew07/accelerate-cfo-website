@@ -1,8 +1,7 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
-const LOGO_ICON = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-icon-mark-9oQXfiLfCWcdBX6nMqvJnG.webp";
-const LOGO_WORDMARK = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-primary-dark-7zEKYmnGztiNkgphVHgQvn.png";
+const LOGO_CIRCLE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-circle-logo_83362397.png";
 
 const navLinks = [
   { label: "Services", href: "#services" },
@@ -32,18 +31,21 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo — icon mark + wordmark image */}
+          {/* Logo — finalized circle logo mark */}
           <a href="#" className="flex items-center gap-3 group">
             <img
-              src={LOGO_ICON}
-              alt="Accelerate CFO icon"
-              className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105"
-            />
-            <img
-              src={LOGO_WORDMARK}
+              src={LOGO_CIRCLE}
               alt="Accelerate CFO"
-              className="h-6 object-contain hidden sm:block"
+              className="h-12 w-12 object-contain transition-transform duration-300 group-hover:scale-105"
             />
+            <div className="hidden sm:flex flex-col">
+              <span className="font-serif text-[1rem] font-bold tracking-[0.08em] text-[oklch(0.9568_0.0119_79.78)] leading-tight uppercase">
+                Accelerate CFO
+              </span>
+              <span className="font-sans text-[0.55rem] font-500 tracking-[0.2em] text-[oklch(0.7432_0.1171_89.51)] uppercase">
+                Fractional CFO Services
+              </span>
+            </div>
           </a>
 
           {/* Desktop Nav */}

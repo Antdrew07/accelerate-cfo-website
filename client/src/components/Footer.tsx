@@ -1,16 +1,15 @@
-const LOGO_ICON = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-icon-mark-9oQXfiLfCWcdBX6nMqvJnG.webp";
-const LOGO_WORDMARK = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-primary-dark-7zEKYmnGztiNkgphVHgQvn.png";
-const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-pattern-c8kwd3myRUP9zeadcbsnNo.webp";
+const LOGO_CIRCLE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-circle-logo_83362397.png";
+const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-chevron-pattern_0089c0eb.png";
 
 export function Footer() {
   return (
     <footer className="relative bg-[oklch(0.1947_0.0363_257.71)] border-t border-[oklch(0.7432_0.1171_89.51_/_0.08)] overflow-hidden">
-      {/* Subtle brand pattern overlay */}
+      {/* Finalized brand chevron pattern overlay */}
       <div
-        className="absolute inset-0 opacity-[0.04] pointer-events-none"
+        className="absolute inset-0 opacity-[0.15] pointer-events-none"
         style={{
           backgroundImage: `url(${BRAND_PATTERN})`,
-          backgroundSize: "400px 400px",
+          backgroundSize: "600px 600px",
           backgroundRepeat: "repeat",
         }}
       />
@@ -19,17 +18,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-5">
+            <div className="flex items-center gap-4 mb-5">
               <img
-                src={LOGO_ICON}
-                alt="Accelerate CFO icon"
-                className="h-9 w-9 object-contain"
-              />
-              <img
-                src={LOGO_WORDMARK}
+                src={LOGO_CIRCLE}
                 alt="Accelerate CFO"
-                className="h-5 object-contain"
+                className="h-14 w-14 object-contain"
               />
+              <div className="flex flex-col">
+                <span className="font-serif text-[0.95rem] font-bold tracking-[0.08em] text-[oklch(0.9568_0.0119_79.78)] leading-tight uppercase">
+                  Accelerate CFO
+                </span>
+                <span className="font-sans text-[0.55rem] font-500 tracking-[0.2em] text-[oklch(0.7432_0.1171_89.51)] uppercase">
+                  Fractional CFO Services
+                </span>
+              </div>
             </div>
             <p className="font-sans text-sm text-[oklch(0.55_0.02_285)] leading-relaxed max-w-xs">
               Experienced Financial Leadership to Accelerate What God Has Called You to Do.

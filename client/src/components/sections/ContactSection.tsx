@@ -27,9 +27,9 @@ export function ContactSection() {
     <section id="contact" className="relative py-28 lg:py-36 bg-[oklch(0.1947_0.0363_257.71)] overflow-hidden">
       {/* Brand pattern overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        className="absolute inset-0 opacity-[0.08] pointer-events-none"
         style={{
-          backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-pattern-c8kwd3myRUP9zeadcbsnNo.webp)`,
+          backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-chevron-pattern_0089c0eb.png)`,
           backgroundSize: "500px 500px",
           backgroundRepeat: "repeat",
         }}
