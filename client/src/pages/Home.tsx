@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { LuxuryDivider } from "@/components/LuxuryDivider";
 import { HeroSection } from "@/components/sections/HeroSection";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { SolutionSection } from "@/components/sections/SolutionSection";
@@ -18,16 +19,26 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <HeroSection />
+      <LuxuryDivider variant="gold-bar" />
       <ProblemSection />
       <SolutionSection />
+      <LuxuryDivider variant="diamond" />
       <ServiceLinesSection />
+      <LuxuryDivider variant="gold-bar" />
       <CFODeepDiveSection />
+      <LuxuryDivider variant="line" />
       <TaxLegalSection />
+      <LuxuryDivider variant="gold-bar" />
       <VenueRealEstateSection />
+      <LuxuryDivider variant="diamond" />
       <DifferentiationSection />
+      <LuxuryDivider variant="gold-bar" />
       <EngageSection />
+      <LuxuryDivider variant="line" />
       <ExecutiveBioSection />
+      <LuxuryDivider variant="diamond" />
       <PromiseSection />
+      <LuxuryDivider variant="gold-bar" />
       <ContactSection />
       <Footer />
     </div>

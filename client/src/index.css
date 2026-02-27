@@ -72,44 +72,30 @@
 
 :root {
   --radius: 0.25rem;
-  /* Background: Deep Navy #0D1B2A — matches business card */
   --background: oklch(0.2177 0.0356 251.29);
-  /* Foreground: Parchment Cream #F5F0E8 */
   --foreground: oklch(0.9568 0.0119 79.78);
-  /* Card: Navy Card #112640 — slightly lighter than bg */
   --card: oklch(0.2659 0.0559 254.82);
   --card-foreground: oklch(0.9568 0.0119 79.78);
-  /* Popover: Navy Card */
   --popover: oklch(0.2659 0.0559 254.82);
   --popover-foreground: oklch(0.9568 0.0119 79.78);
-  /* Primary: 24K Gold #C9A84C */
   --primary: oklch(0.7432 0.1171 89.51);
   --primary-foreground: oklch(0.2177 0.0356 251.29);
-  /* Secondary: Navy Muted #1A2A40 */
   --secondary: oklch(0.2823 0.0462 256.56);
   --secondary-foreground: oklch(0.9568 0.0119 79.78);
-  /* Muted: Navy Muted */
   --muted: oklch(0.2823 0.0462 256.56);
   --muted-foreground: oklch(0.6387 0.0237 285.71);
-  /* Accent: Navy Card */
   --accent: oklch(0.2659 0.0559 254.82);
   --accent-foreground: oklch(0.7432 0.1171 89.51);
-  /* Destructive */
   --destructive: oklch(0.4544 0.1568 24.59);
   --destructive-foreground: oklch(0.9837 0.0066 106.52);
-  /* Border: Navy Border #1B3557 */
   --border: oklch(0.3266 0.0687 255.83);
-  /* Input: Navy Muted */
   --input: oklch(0.2823 0.0462 256.56);
-  /* Ring: 24K Gold */
   --ring: oklch(0.7432 0.1171 89.51);
-  /* Charts: Gold gradient scale */
   --chart-1: oklch(0.7432 0.1171 89.51);
   --chart-2: oklch(0.565 0.0889 88.97);
   --chart-3: oklch(0.48 0.07 89);
   --chart-4: oklch(0.4 0.06 89);
   --chart-5: oklch(0.32 0.04 89);
-  /* Sidebar: Darkest Navy */
   --sidebar: oklch(0.1947 0.0363 257.71);
   --sidebar-foreground: oklch(0.9568 0.0119 79.78);
   --sidebar-primary: oklch(0.7432 0.1171 89.51);
@@ -196,15 +182,106 @@
     border: none;
   }
 
-  /* Gold top border card */
+  /* ========================================
+     LUXURY UPGRADE — Premium Visual Classes
+     ======================================== */
+
+  /* Glassmorphism card — frosted glass with gold border glow */
+  .glass-card {
+    background: oklch(0.2177 0.0356 251.29 / 0.6);
+    backdrop-filter: blur(20px) saturate(1.4);
+    -webkit-backdrop-filter: blur(20px) saturate(1.4);
+    border: 1px solid oklch(0.7432 0.1171 89.51 / 0.15);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .glass-card:hover {
+    background: oklch(0.2177 0.0356 251.29 / 0.75);
+    border-color: oklch(0.7432 0.1171 89.51 / 0.35);
+    box-shadow:
+      0 0 30px oklch(0.7432 0.1171 89.51 / 0.08),
+      0 20px 60px oklch(0 0 0 / 0.4),
+      inset 0 1px 0 oklch(1 0 0 / 0.05);
+    transform: translateY(-6px);
+  }
+
+  /* Gold top border card — upgraded */
   .gold-card {
     border-top: 2px solid oklch(0.7432 0.1171 89.51);
-    transition: border-top-width 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    background: oklch(0.2659 0.0559 254.82 / 0.5);
+    backdrop-filter: blur(12px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .gold-card:hover {
-    border-top-width: 4px;
-    transform: translateY(-4px);
-    box-shadow: 0 20px 40px oklch(0 0 0 / 0.3);
+    border-top-width: 3px;
+    transform: translateY(-6px);
+    box-shadow:
+      0 0 40px oklch(0.7432 0.1171 89.51 / 0.1),
+      0 25px 50px oklch(0 0 0 / 0.4);
+  }
+
+  /* Gold glow effect for key elements */
+  .gold-glow {
+    box-shadow:
+      0 0 20px oklch(0.7432 0.1171 89.51 / 0.1),
+      0 0 60px oklch(0.7432 0.1171 89.51 / 0.05);
+  }
+
+  /* Luxury section divider — gold gradient line */
+  .luxury-divider {
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      oklch(0.7432 0.1171 89.51 / 0.1) 15%,
+      oklch(0.7432 0.1171 89.51 / 0.6) 50%,
+      oklch(0.7432 0.1171 89.51 / 0.1) 85%,
+      transparent
+    );
+  }
+
+  /* Luxury section divider with diamond center */
+  .luxury-divider-diamond {
+    position: relative;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      oklch(0.7432 0.1171 89.51 / 0.1) 20%,
+      oklch(0.7432 0.1171 89.51 / 0.5) 50%,
+      oklch(0.7432 0.1171 89.51 / 0.1) 80%,
+      transparent
+    );
+  }
+  .luxury-divider-diamond::after {
+    content: '◆';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.5rem;
+    color: oklch(0.7432 0.1171 89.51);
+    background: oklch(0.2177 0.0356 251.29);
+    padding: 0 0.75rem;
+  }
+
+  /* Cinematic section — full-bleed background image with overlay */
+  .cinematic-section {
+    position: relative;
+    overflow: hidden;
+  }
+  .cinematic-section > .cinematic-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+  }
+  .cinematic-section > .cinematic-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cinematic-section > .cinematic-content {
+    position: relative;
+    z-index: 2;
   }
 
   /* Cream document section */
@@ -225,7 +302,8 @@
   .btn-gold {
     position: relative;
     overflow: hidden;
-    background: oklch(0.7432 0.1171 89.51);
+    background: linear-gradient(135deg, oklch(0.7432 0.1171 89.51), oklch(0.82 0.1 89.51), oklch(0.7432 0.1171 89.51));
+    background-size: 200% 200%;
     color: oklch(0.2177 0.0356 251.29);
     font-family: var(--font-sans);
     font-weight: 700;
@@ -233,7 +311,8 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: 1rem 2.5rem;
-    transition: all 0.3s ease;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 15px oklch(0.7432 0.1171 89.51 / 0.2);
   }
   .btn-gold::after {
     content: '';
@@ -242,16 +321,18 @@
     left: -100%;
     width: 100%;
     height: 100%;
-    background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.2), transparent);
-    transition: left 0.5s ease;
+    background: linear-gradient(90deg, transparent, oklch(1 0 0 / 0.25), transparent);
+    transition: left 0.6s ease;
   }
   .btn-gold:hover::after {
     left: 100%;
   }
   .btn-gold:hover {
-    background: oklch(0.82 0.1 89.51);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px oklch(0.7432 0.1171 89.51 / 0.3);
+    background-position: 100% 0;
+    transform: translateY(-3px);
+    box-shadow:
+      0 8px 30px oklch(0.7432 0.1171 89.51 / 0.35),
+      0 0 20px oklch(0.7432 0.1171 89.51 / 0.15);
   }
 
   .btn-outline-gold {
@@ -264,12 +345,15 @@
     text-transform: uppercase;
     font-size: 0.8rem;
     padding: 1rem 2.5rem;
-    background: transparent;
-    transition: all 0.3s ease;
+    background: oklch(0.2177 0.0356 251.29 / 0.3);
+    backdrop-filter: blur(8px);
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   }
   .btn-outline-gold:hover {
-    background: oklch(0.7432 0.1171 89.51 / 0.1);
-    transform: translateY(-2px);
+    background: oklch(0.7432 0.1171 89.51 / 0.12);
+    border-color: oklch(0.82 0.1 89.51);
+    transform: translateY(-3px);
+    box-shadow: 0 0 20px oklch(0.7432 0.1171 89.51 / 0.1);
   }
 
   /* Grain overlay */
@@ -281,6 +365,27 @@
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
     pointer-events: none;
     z-index: 1;
+  }
+
+  /* Gold shimmer text — for headlines */
+  .gold-shimmer-text {
+    background: linear-gradient(135deg, oklch(0.7432 0.1171 89.51), oklch(0.85 0.09 85), oklch(0.7432 0.1171 89.51));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Luxury icon container */
+  .luxury-icon {
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, oklch(0.7432 0.1171 89.51 / 0.15), oklch(0.7432 0.1171 89.51 / 0.05));
+    border: 1px solid oklch(0.7432 0.1171 89.51 / 0.3);
+    color: oklch(0.7432 0.1171 89.51);
   }
 }
 

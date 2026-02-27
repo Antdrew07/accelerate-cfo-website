@@ -3,10 +3,13 @@ const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/
 
 export function Footer() {
   return (
-    <footer className="relative bg-[oklch(0.1947_0.0363_257.71)] border-t border-[oklch(0.7432_0.1171_89.51_/_0.08)] overflow-hidden">
-      {/* Finalized brand chevron pattern overlay */}
+    <footer className="relative bg-[oklch(0.1647_0.0295_257.71)] overflow-hidden">
+      {/* Top gold accent line */}
+      <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[oklch(0.7432_0.1171_89.51_/_0.4)] to-transparent" />
+
+      {/* Brand pattern overlay */}
       <div
-        className="absolute inset-0 opacity-[0.15] pointer-events-none"
+        className="absolute inset-0 opacity-[0.08] pointer-events-none"
         style={{
           backgroundImage: `url(${BRAND_PATTERN})`,
           backgroundSize: "600px 600px",
@@ -14,15 +17,18 @@ export function Footer() {
         }}
       />
 
-      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      {/* Ambient glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[radial-gradient(ellipse,oklch(0.7432_0.1171_89.51_/_0.03)_0%,transparent_70%)] pointer-events-none" />
+
+      <div className="relative max-w-7xl mx-auto px-6 lg:px-8 py-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-16">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-4 mb-5">
+            <div className="flex items-center gap-4 mb-6">
               <img
                 src={LOGO_CIRCLE}
                 alt="Accelerate CFO"
-                className="h-14 w-14 object-contain"
+                className="h-14 w-14 object-contain drop-shadow-[0_0_10px_oklch(0.7432_0.1171_89.51_/_0.15)]"
               />
               <div className="flex flex-col">
                 <span className="font-serif text-[0.95rem] font-bold tracking-[0.08em] text-[oklch(0.9568_0.0119_79.78)] leading-tight uppercase">
@@ -33,7 +39,7 @@ export function Footer() {
                 </span>
               </div>
             </div>
-            <p className="font-sans text-sm text-[oklch(0.55_0.02_285)] leading-relaxed max-w-xs">
+            <p className="font-sans text-sm text-[oklch(0.55_0.01_260)] leading-relaxed max-w-xs">
               Experienced Financial Leadership to Accelerate What God Has Called You to Do.
             </p>
           </div>
@@ -43,14 +49,14 @@ export function Footer() {
             <h4 className="font-sans text-xs font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] mb-6">
               Quick Links
             </h4>
-            <div className="space-y-3">
+            <div className="space-y-4">
               {["Services", "Why Us", "How We Engage", "Leadership", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase().replace(/\s+/g, "-")}`}
-                  className="block font-sans text-sm text-[oklch(0.55_0.02_285)] hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors duration-300"
+                  className="block font-sans text-sm text-[oklch(0.55_0.01_260)] hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors duration-300 group"
                 >
-                  {item}
+                  <span className="inline-block group-hover:translate-x-1 transition-transform duration-300">{item}</span>
                 </a>
               ))}
             </div>
@@ -61,22 +67,22 @@ export function Footer() {
             <h4 className="font-sans text-xs font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] mb-6">
               Contact
             </h4>
-            <div className="space-y-3 font-sans text-sm text-[oklch(0.55_0.02_285)]">
+            <div className="space-y-4 font-sans text-sm text-[oklch(0.55_0.01_260)]">
               <p>Wesley Chapel, FL</p>
-              <a href="tel:2053811555" className="block hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors">(205) 381-1555</a>
-              <a href="mailto:info@acceleratecfo.com" className="block hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors">info@acceleratecfo.com</a>
+              <a href="tel:2053811555" className="block hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors duration-300">(205) 381-1555</a>
+              <a href="mailto:info@acceleratecfo.com" className="block hover:text-[oklch(0.7432_0.1171_89.51)] transition-colors duration-300">info@acceleratecfo.com</a>
             </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="gold-rule mb-8" />
+        <div className="luxury-divider max-w-full mb-8" />
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="font-sans text-xs text-[oklch(0.42_0.02_285)]">
+          <p className="font-sans text-xs text-[oklch(0.4_0.01_260)]">
             &copy; {new Date().getFullYear()} Accelerate CFO. All rights reserved.
           </p>
-          <p className="font-sans text-xs text-[oklch(0.42_0.02_285)] tracking-[0.1em]">
-            40+ Years Experience &bull; Faith-Driven &bull; Kingdom-Focused
+          <p className="font-sans text-xs text-[oklch(0.4_0.01_260)] tracking-[0.1em]">
+            40+ Years Experience <span className="text-[oklch(0.7432_0.1171_89.51)]">◆</span> Faith-Driven <span className="text-[oklch(0.7432_0.1171_89.51)]">◆</span> Kingdom-Focused
           </p>
         </div>
       </div>

@@ -1,11 +1,13 @@
 /*
- * Design: "The Vault" — Dark Editorial Luxury
- * Tax & Legal: Dark section, two-column split
- * Tone: protective, strategic, elite
+ * LUXURY UPGRADE — Tax & Legal Section
+ * Gold texture background, glassmorphism cards, premium depth
  */
 
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { Shield, Scale } from "lucide-react";
+
+const GOLD_TEXTURE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/luxury-gold-texture-6TDxMjJYSJGYTCqGJvRjsM.webp";
+const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-chevron-pattern_0089c0eb.png";
 
 const taxServices = [
   "Housing allowance structuring and documentation",
@@ -25,45 +27,57 @@ const legalServices = [
   "Risk management and liability review",
 ];
 
-const ABSTRACT_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/abstract-gold-finance-UFnSyMZYFF7iJW9ae45EQN.webp";
-
 export function TaxLegalSection() {
   return (
-    <section className="relative py-28 lg:py-36 bg-[oklch(0.1947_0.0363_257.71)] overflow-hidden">
-      {/* Subtle background image */}
-      <div className="absolute inset-0 opacity-[0.07]">
-        <img src={ABSTRACT_IMG} alt="" className="w-full h-full object-cover" />
+    <section className="relative py-32 lg:py-40 overflow-hidden">
+      {/* Cinematic gold texture background */}
+      <div className="absolute inset-0">
+        <img src={GOLD_TEXTURE} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.2177_0.0356_251.29_/_0.95)] via-[oklch(0.2177_0.0356_251.29_/_0.92)] to-[oklch(0.2177_0.0356_251.29_/_0.96)]" />
+        <div
+          className="absolute inset-0 opacity-[0.04] pointer-events-none"
+          style={{
+            backgroundImage: `url(${BRAND_PATTERN})`,
+            backgroundSize: "500px 500px",
+            backgroundRepeat: "repeat",
+          }}
+        />
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <AnimatedSection className="mb-16 text-center max-w-3xl mx-auto">
-          <p className="section-label mb-4">Tax & Legal Extension</p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.9568_0.0119_79.78)] leading-tight mb-6">
+        <AnimatedSection className="mb-20 text-center max-w-3xl mx-auto">
+          <p className="section-label mb-5">Tax & Legal Extension</p>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-[oklch(0.9568_0.0119_79.78)] leading-[1.1] mb-8">
             Protecting Pastors and{" "}
-            <span className="text-[oklch(0.7432_0.1171_89.51)]">Their Organizations</span>
+            <span className="gold-shimmer-text">Their Organizations</span>
           </h2>
-          <p className="font-sans text-base text-[oklch(0.55_0.02_285)] leading-relaxed">
+          <div className="gold-rule max-w-[160px] mx-auto mb-8" />
+          <p className="font-sans text-base text-[oklch(0.6_0.01_260)] leading-relaxed">
             We ensure pastors receive every lawful tax benefit while keeping the organization fully compliant.
           </p>
         </AnimatedSection>
 
-        {/* Two Columns */}
+        {/* Two Columns — Glassmorphism */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
           {/* Tax Column */}
           <AnimatedSection delay={0.1}>
-            <div className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-8 lg:p-12 h-full">
-              <div className="flex items-center gap-4 mb-8">
-                <Shield className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)]" strokeWidth={1.5} />
+            <div className="glass-card p-8 lg:p-12 h-full group">
+              <div className="flex items-center gap-4 mb-10">
+                <div className="luxury-icon w-14 h-14">
+                  <Shield className="w-6 h-6" strokeWidth={1.5} />
+                </div>
                 <h3 className="font-serif text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)]">
                   Pastoral Tax Services
                 </h3>
               </div>
               <div className="space-y-5">
                 {taxServices.map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 group">
-                    <span className="w-6 h-[1px] bg-[oklch(0.7432_0.1171_89.51)] mt-3 shrink-0 group-hover:w-10 transition-all duration-300" />
-                    <span className="font-sans text-[oklch(0.6387_0.0237_285.71)] leading-relaxed">
+                  <div key={i} className="flex items-start gap-4 group/item">
+                    <div className="w-5 h-5 flex items-center justify-center mt-0.5 shrink-0">
+                      <div className="w-1.5 h-1.5 rotate-45 bg-[oklch(0.7432_0.1171_89.51)] group-hover/item:scale-150 transition-transform duration-300" />
+                    </div>
+                    <span className="font-sans text-[0.9rem] text-[oklch(0.65_0.01_260)] leading-relaxed">
                       {item}
                     </span>
                   </div>
@@ -74,18 +88,22 @@ export function TaxLegalSection() {
 
           {/* Legal Column */}
           <AnimatedSection delay={0.2}>
-            <div className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-8 lg:p-12 h-full">
-              <div className="flex items-center gap-4 mb-8">
-                <Scale className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)]" strokeWidth={1.5} />
+            <div className="glass-card p-8 lg:p-12 h-full group">
+              <div className="flex items-center gap-4 mb-10">
+                <div className="luxury-icon w-14 h-14">
+                  <Scale className="w-6 h-6" strokeWidth={1.5} />
+                </div>
                 <h3 className="font-serif text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)]">
                   Legal Extension Services
                 </h3>
               </div>
               <div className="space-y-5">
                 {legalServices.map((item, i) => (
-                  <div key={i} className="flex items-start gap-4 group">
-                    <span className="w-6 h-[1px] bg-[oklch(0.7432_0.1171_89.51)] mt-3 shrink-0 group-hover:w-10 transition-all duration-300" />
-                    <span className="font-sans text-[oklch(0.6387_0.0237_285.71)] leading-relaxed">
+                  <div key={i} className="flex items-start gap-4 group/item">
+                    <div className="w-5 h-5 flex items-center justify-center mt-0.5 shrink-0">
+                      <div className="w-1.5 h-1.5 rotate-45 bg-[oklch(0.7432_0.1171_89.51)] group-hover/item:scale-150 transition-transform duration-300" />
+                    </div>
+                    <span className="font-sans text-[0.9rem] text-[oklch(0.65_0.01_260)] leading-relaxed">
                       {item}
                     </span>
                   </div>

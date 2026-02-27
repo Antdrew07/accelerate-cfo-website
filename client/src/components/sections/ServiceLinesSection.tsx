@@ -1,12 +1,14 @@
 /*
- * Design: "The Vault" — Dark Editorial Luxury
- * Service Lines: Dark bg, 6 premium service blocks with gold top borders
- * Each block has authority headline + bullet breakdowns
+ * LUXURY UPGRADE — Service Lines Section
+ * Glassmorphism cards with gold glow, luxury icon containers, cinematic depth
  */
 
 import { AnimatedSection } from "@/components/AnimatedSection";
 import { useState } from "react";
 import { BarChart3, Calculator, MapPin, Building, Gavel, Shield, ChevronDown, ChevronUp } from "lucide-react";
+
+const GOLD_TEXTURE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/luxury-gold-texture-Uj6QjQgmD77ZwYxtLRmUqx.webp";
+const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-chevron-pattern_0089c0eb.png";
 
 const services = [
   {
@@ -96,21 +98,26 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
   return (
     <AnimatedSection delay={index * 0.08}>
-      <div className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-8 lg:p-10 h-full">
-        <service.icon className="w-8 h-8 text-[oklch(0.7432_0.1171_89.51)] mb-5" strokeWidth={1.5} />
+      <div className="glass-card p-8 lg:p-10 h-full group relative overflow-hidden">
+        {/* Subtle gold glow on top border */}
+        <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-[oklch(0.7432_0.1171_89.51)] to-transparent opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
+
+        <div className="luxury-icon mb-6 group-hover:shadow-[0_0_25px_oklch(0.7432_0.1171_89.51_/_0.2)] transition-all duration-500">
+          <service.icon className="w-6 h-6" strokeWidth={1.5} />
+        </div>
         <h3 className="font-serif text-xl lg:text-2xl font-bold text-[oklch(0.9568_0.0119_79.78)] mb-2">
           {service.title}
         </h3>
-        <p className="font-sans text-sm text-[oklch(0.7432_0.1171_89.51)] font-500 mb-5 tracking-wide">
+        <p className="font-sans text-sm text-[oklch(0.7432_0.1171_89.51)] font-500 mb-6 tracking-wide">
           {service.headline}
         </p>
 
-        {/* Bullets — show first 4 always, rest on expand */}
+        {/* Bullets */}
         <ul className="space-y-3">
           {service.bullets.slice(0, expanded ? undefined : 4).map((bullet) => (
             <li key={bullet} className="flex items-start gap-3">
-              <span className="w-1 h-1 rounded-full bg-[oklch(0.7432_0.1171_89.51)] mt-2 shrink-0" />
-              <span className="font-sans text-sm text-[oklch(0.6_0.01_260)] leading-relaxed">
+              <span className="w-1.5 h-1.5 rotate-45 bg-[oklch(0.7432_0.1171_89.51_/_0.6)] mt-1.5 shrink-0" />
+              <span className="font-sans text-sm text-[oklch(0.65_0.01_260)] leading-relaxed">
                 {bullet}
               </span>
             </li>
@@ -120,7 +127,7 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
         {service.bullets.length > 4 && (
           <button
             onClick={() => setExpanded(!expanded)}
-            className="flex items-center gap-2 mt-5 font-sans text-xs font-600 tracking-[0.1em] uppercase text-[oklch(0.7432_0.1171_89.51)] hover:text-[oklch(0.82_0.1_89.51)] transition-colors"
+            className="flex items-center gap-2 mt-6 font-sans text-xs font-600 tracking-[0.1em] uppercase text-[oklch(0.7432_0.1171_89.51)] hover:text-[oklch(0.82_0.1_89.51)] transition-colors"
           >
             {expanded ? "Show Less" : `+${service.bullets.length - 4} More`}
             {expanded ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
@@ -133,20 +140,38 @@ function ServiceCard({ service, index }: { service: typeof services[0]; index: n
 
 export function ServiceLinesSection() {
   return (
-    <section id="services" className="relative py-28 lg:py-36 bg-[oklch(0.2177_0.0356_251.29)] grain-overlay overflow-hidden">
+    <section id="services" className="relative py-32 lg:py-40 overflow-hidden">
+      {/* Cinematic gold texture background */}
+      <div className="absolute inset-0">
+        <img
+          src={GOLD_TEXTURE}
+          alt=""
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.2177_0.0356_251.29_/_0.95)] via-[oklch(0.2177_0.0356_251.29_/_0.92)] to-[oklch(0.2177_0.0356_251.29_/_0.96)]" />
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none"
+          style={{
+            backgroundImage: `url(${BRAND_PATTERN})`,
+            backgroundSize: "500px 500px",
+            backgroundRepeat: "repeat",
+          }}
+        />
+      </div>
+
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-8">
         {/* Header */}
-        <AnimatedSection className="mb-16 text-center max-w-3xl mx-auto">
-          <p className="section-label mb-4">Service Lines</p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.9568_0.0119_79.78)] leading-tight mb-6">
+        <AnimatedSection className="mb-20 text-center max-w-3xl mx-auto">
+          <p className="section-label mb-5">Service Lines</p>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-[oklch(0.9568_0.0119_79.78)] leading-[1.1] mb-8">
             A Full-Spectrum CFO Firm{" "}
-            <span className="text-[oklch(0.7432_0.1171_89.51)]">Built for Ministry</span>
+            <span className="gold-shimmer-text">Built for Ministry</span>
           </h2>
-          <div className="gold-rule max-w-[120px] mx-auto" />
+          <div className="gold-rule max-w-[160px] mx-auto" />
         </AnimatedSection>
 
         {/* Service Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
           {services.map((service, i) => (
             <ServiceCard key={service.title} service={service} index={i} />
           ))}

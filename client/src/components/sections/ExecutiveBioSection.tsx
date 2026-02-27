@@ -1,106 +1,86 @@
 /*
- * Design: "The Vault" — Dark Editorial Luxury
- * Leadership Section: Barry Howton (CEO) with headshot + Nathan Byrd (Executive CFO)
- * Dark section with editorial layout, gold accents
+ * LUXURY UPGRADE — Leadership Section
+ * Barry Howton (CEO) with headshot + Nathan Byrd (Executive CFO)
+ * Cinematic boardroom background, glassmorphism cards, premium depth
  */
 
 import { AnimatedSection } from "@/components/AnimatedSection";
-import { Award, Shield, BookOpen, Swords, Building2, Users, Globe, TrendingUp } from "lucide-react";
+import { Award, Shield, BookOpen, Swords, Building2, Users, Globe } from "lucide-react";
+
+const BOARDROOM_IMG = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/luxury-boardroom-1s3Xvz7yzCWNMjQCLsNVaR.webp";
+const BRAND_PATTERN = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-chevron-pattern_0089c0eb.png";
+const LOGO_CIRCLE = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-circle-logo_83362397.png";
+const BARRY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/barry-howton-headshot_47649274.jpeg";
 
 const barryCredentials = [
-  {
-    icon: Building2,
-    title: "CEO, Consolidated Pipe & Supply",
-    detail: "Birmingham, AL — Major national corporation",
-  },
-  {
-    icon: Award,
-    title: "BBJ CFO Award Nominee",
-    detail: "2021 Birmingham Business Journal",
-  },
-  {
-    icon: Globe,
-    title: "Church of the Highlands Trustee",
-    detail: "One of America's largest churches",
-  },
-  {
-    icon: Users,
-    title: "A18 Network Board of Directors",
-    detail: "Global Kingdom leadership network",
-  },
+  { icon: Building2, title: "CEO, Consolidated Pipe & Supply", detail: "Birmingham, AL — Major national corporation" },
+  { icon: Award, title: "BBJ CFO Award Nominee", detail: "2021 Birmingham Business Journal" },
+  { icon: Globe, title: "Church of the Highlands Trustee", detail: "One of America's largest churches" },
+  { icon: Users, title: "A18 Network Board of Directors", detail: "Global Kingdom leadership network" },
 ];
 
 const nathanCredentials = [
-  {
-    icon: Award,
-    title: "CPA, Dual-Licensed",
-    detail: "Alabama & Florida",
-  },
-  {
-    icon: BookOpen,
-    title: "Ernst & Young (EY)",
-    detail: "Big 4 Audit Foundation",
-  },
-  {
-    icon: Shield,
-    title: "Master of Accountancy",
-    detail: "University of Alabama",
-  },
-  {
-    icon: Swords,
-    title: "U.S. Marine Corps Veteran",
-    detail: "Operation Iraqi Freedom",
-  },
+  { icon: Award, title: "CPA, Dual-Licensed", detail: "Alabama & Florida" },
+  { icon: BookOpen, title: "Ernst & Young (EY)", detail: "Big 4 Audit Foundation" },
+  { icon: Shield, title: "Master of Accountancy", detail: "University of Alabama" },
+  { icon: Swords, title: "U.S. Marine Corps Veteran", detail: "Operation Iraqi Freedom" },
 ];
-
-const BARRY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/barry-howton-headshot_47649274.jpeg";
 
 export function ExecutiveBioSection() {
   return (
-    <section id="leadership" className="relative py-28 lg:py-36 bg-[oklch(0.2177_0.0356_251.29)] grain-overlay overflow-hidden">
-      {/* Brand pattern overlay */}
-      <div
-        className="absolute inset-0 opacity-[0.08] pointer-events-none"
-        style={{
-          backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-chevron-pattern_0089c0eb.png)`,
-          backgroundSize: "500px 500px",
-          backgroundRepeat: "repeat",
-        }}
-      />
+    <section id="leadership" className="relative py-32 lg:py-40 overflow-hidden">
+      {/* Cinematic boardroom background */}
+      <div className="absolute inset-0">
+        <img src={BOARDROOM_IMG} alt="" className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[oklch(0.2177_0.0356_251.29_/_0.95)] via-[oklch(0.2177_0.0356_251.29_/_0.92)] to-[oklch(0.2177_0.0356_251.29_/_0.96)]" />
+        <div
+          className="absolute inset-0 opacity-[0.05] pointer-events-none"
+          style={{
+            backgroundImage: `url(${BRAND_PATTERN})`,
+            backgroundSize: "500px 500px",
+            backgroundRepeat: "repeat",
+          }}
+        />
+      </div>
+
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="mb-20">
-          <p className="section-label mb-4">Leadership</p>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-[oklch(0.9568_0.0119_79.78)] leading-tight mb-6">
+          <p className="section-label mb-5">Leadership</p>
+          <h2 className="font-serif text-3xl sm:text-4xl lg:text-[3.5rem] font-bold text-[oklch(0.9568_0.0119_79.78)] leading-[1.1] mb-8">
             The Team Behind{" "}
-            <span className="text-[oklch(0.7432_0.1171_89.51)]">Your Mission</span>
+            <span className="gold-shimmer-text">Your Mission</span>
           </h2>
-          <div className="gold-rule max-w-[120px]" />
+          <div className="gold-rule max-w-[160px]" />
         </AnimatedSection>
 
         {/* ===== BARRY HOWTON — CEO ===== */}
         <AnimatedSection delay={0.1} className="mb-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-            {/* Photo */}
+            {/* Photo with luxury frame */}
             <div className="lg:col-span-4">
               <div className="relative">
-                <div className="absolute -inset-3 border border-[oklch(0.7432_0.1171_89.51_/_0.2)] pointer-events-none" />
-                <img
-                  src={BARRY_PHOTO}
-                  alt="Barry Howton, CEO of Accelerate CFO"
-                  className="w-full aspect-[3/4] object-cover object-top grayscale-[20%] contrast-[1.05]"
-                />
+                {/* Gold corner accents */}
+                <div className="absolute -top-3 -left-3 w-14 h-14 border-t-2 border-l-2 border-[oklch(0.7432_0.1171_89.51_/_0.5)] z-10" />
+                <div className="absolute -bottom-3 -right-3 w-14 h-14 border-b-2 border-r-2 border-[oklch(0.7432_0.1171_89.51_/_0.5)] z-10" />
+                <div className="overflow-hidden shadow-[0_25px_60px_oklch(0_0_0_/_0.3)]">
+                  <img
+                    src={BARRY_PHOTO}
+                    alt="Barry Howton, CEO of Accelerate CFO"
+                    className="w-full aspect-[3/4] object-cover object-top grayscale-[15%] contrast-[1.05]"
+                  />
+                </div>
                 <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-[oklch(0.2177_0.0356_251.29)] to-transparent h-24" />
               </div>
-              <p className="font-sans text-[0.65rem] text-[oklch(0.42_0.02_285)] mt-3 tracking-wide">
+              <p className="font-sans text-[0.6rem] text-[oklch(0.42_0.02_260)] mt-3 tracking-wide italic">
                 Photo: David Lundgren
               </p>
             </div>
 
             {/* Bio Content */}
             <div className="lg:col-span-8">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="font-sans text-[0.65rem] font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] bg-[oklch(0.7432_0.1171_89.51_/_0.1)] px-3 py-1">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="font-sans text-[0.65rem] font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] bg-[oklch(0.7432_0.1171_89.51_/_0.1)] border border-[oklch(0.7432_0.1171_89.51_/_0.2)] px-4 py-1.5">
                   Chief Executive Officer
                 </span>
               </div>
@@ -108,27 +88,29 @@ export function ExecutiveBioSection() {
                 Barry Howton
               </h3>
 
-              <p className="font-sans text-base text-[oklch(0.6387_0.0237_285.71)] leading-relaxed mb-5">
+              <p className="font-sans text-base text-[oklch(0.65_0.01_260)] leading-[1.8] mb-5">
                 Barry Howton is a seasoned executive leader with decades of experience at the highest levels of corporate finance and strategic leadership. As CEO of Consolidated Pipe & Supply Co. — a major national corporation headquartered in Birmingham, Alabama — Barry has led large-scale operations, directed multi-million-dollar investments, and shaped the strategic direction of an organization with a national footprint.
               </p>
-              <p className="font-sans text-base text-[oklch(0.6387_0.0237_285.71)] leading-relaxed mb-5">
+              <p className="font-sans text-base text-[oklch(0.65_0.01_260)] leading-[1.8] mb-5">
                 Barry's financial acumen earned him a nomination for the 2021 Birmingham Business Journal CFO Award, recognizing his exceptional leadership in corporate finance. But what sets Barry apart is the intersection of executive-level business expertise and deep Kingdom commitment. He serves as a Trustee at Church of the Highlands — one of the largest and most influential churches in America — and sits on the Board of Directors for the A18 Network, a global association of churches and ministries.
               </p>
-              <p className="font-sans text-base text-[oklch(0.6387_0.0237_285.71)] leading-relaxed mb-8">
+              <p className="font-sans text-base text-[oklch(0.65_0.01_260)] leading-[1.8] mb-10">
                 Barry is widely regarded as a strategic networker, connecting pastors and movement leaders across the globe. His passion for the Great Commission, combined with his corporate leadership experience, uniquely positions him to lead Accelerate CFO's mission: bringing Fortune 500-caliber financial leadership to the churches and ministries that need it most.
               </p>
 
-              {/* Credentials Grid */}
+              {/* Credentials Grid — Glassmorphism */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {barryCredentials.map((cred, i) => (
-                  <div key={i} className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-5">
+                  <div key={i} className="glass-card p-5 group">
                     <div className="flex items-center gap-3">
-                      <cred.icon className="w-5 h-5 text-[oklch(0.7432_0.1171_89.51)] shrink-0" strokeWidth={1.5} />
+                      <div className="luxury-icon w-10 h-10 shrink-0">
+                        <cred.icon className="w-4 h-4" strokeWidth={1.5} />
+                      </div>
                       <div>
                         <h4 className="font-serif text-sm font-bold text-[oklch(0.9568_0.0119_79.78)]">
                           {cred.title}
                         </h4>
-                        <p className="font-sans text-xs text-[oklch(0.5_0.02_285)]">
+                        <p className="font-sans text-xs text-[oklch(0.5_0.01_260)]">
                           {cred.detail}
                         </p>
                       </div>
@@ -138,11 +120,11 @@ export function ExecutiveBioSection() {
               </div>
 
               {/* Quote */}
-              <div className="mt-8 border-l-2 border-[oklch(0.7432_0.1171_89.51)] pl-6">
+              <div className="mt-10 border-l-2 border-[oklch(0.7432_0.1171_89.51)] pl-6">
                 <blockquote className="font-serif text-base italic text-[oklch(0.7432_0.1171_89.51)] leading-relaxed">
                   "Churches deserve the same caliber of financial leadership as any Fortune 500 company — but with a team that understands the mission."
                 </blockquote>
-                <p className="font-sans text-xs text-[oklch(0.5_0.02_285)] mt-2">
+                <p className="font-sans text-xs text-[oklch(0.5_0.01_260)] mt-2">
                   — Barry Howton, CEO
                 </p>
               </div>
@@ -151,15 +133,15 @@ export function ExecutiveBioSection() {
         </AnimatedSection>
 
         {/* Divider */}
-        <div className="gold-rule max-w-[200px] mx-auto mb-28" />
+        <div className="luxury-divider max-w-[300px] mx-auto mb-28" />
 
         {/* ===== NATHAN BYRD — EXECUTIVE CFO ===== */}
         <AnimatedSection delay={0.15}>
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             {/* Bio Content */}
             <div className="lg:col-span-8 order-2 lg:order-1">
-              <div className="flex items-center gap-3 mb-2">
-                <span className="font-sans text-[0.65rem] font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] bg-[oklch(0.7432_0.1171_89.51_/_0.1)] px-3 py-1">
+              <div className="flex items-center gap-3 mb-3">
+                <span className="font-sans text-[0.65rem] font-700 tracking-[0.2em] uppercase text-[oklch(0.7432_0.1171_89.51)] bg-[oklch(0.7432_0.1171_89.51_/_0.1)] border border-[oklch(0.7432_0.1171_89.51_/_0.2)] px-4 py-1.5">
                   Executive CFO
                 </span>
               </div>
@@ -167,27 +149,29 @@ export function ExecutiveBioSection() {
                 Nathan S. Byrd, CPA
               </h3>
 
-              <p className="font-sans text-base text-[oklch(0.6387_0.0237_285.71)] leading-relaxed mb-5">
+              <p className="font-sans text-base text-[oklch(0.65_0.01_260)] leading-[1.8] mb-5">
                 Nathan Byrd is a CPA with 15+ years of combined experience in corporate and public accounting, spanning Big 4 audit at Ernst & Young, Fortune 500 companies, billion-dollar construction firms, regulated utilities, and nonprofit ministry. He has managed teams, led financial transformations, and served in executive leadership across industries that demand precision, integrity, and strategic clarity.
               </p>
-              <p className="font-sans text-base text-[oklch(0.6387_0.0237_285.71)] leading-relaxed mb-5">
+              <p className="font-sans text-base text-[oklch(0.65_0.01_260)] leading-[1.8] mb-5">
                 As Finance Director at The Gathering Place Church, Nathan built the financial reporting and budgeting infrastructure from the ground up — creating dashboards, managing staff and volunteers, and serving as the bridge between church leadership and financial stewardship. That experience, combined with his corporate career at Alabama Power ($5B+ utility), BL Harbert International ($1B+ construction), and ProAssurance Corporation, gave him a unique vantage point: churches need the same caliber of financial leadership as any Fortune 500 company, but with a team that understands the mission.
               </p>
-              <p className="font-sans text-base text-[oklch(0.6387_0.0237_285.71)] leading-relaxed mb-8">
+              <p className="font-sans text-base text-[oklch(0.65_0.01_260)] leading-[1.8] mb-10">
                 Nathan is a proud veteran of the United States Marine Corps, having served a combat tour in Operation Iraqi Freedom. His military discipline, combined with his financial expertise and heart for ministry, drives the Accelerate CFO mission every day.
               </p>
 
-              {/* Credentials Grid */}
+              {/* Credentials Grid — Glassmorphism */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                 {nathanCredentials.map((cred, i) => (
-                  <div key={i} className="gold-card bg-[oklch(0.2659_0.0559_254.82)] p-5">
+                  <div key={i} className="glass-card p-5 group">
                     <div className="flex items-center gap-3">
-                      <cred.icon className="w-5 h-5 text-[oklch(0.7432_0.1171_89.51)] shrink-0" strokeWidth={1.5} />
+                      <div className="luxury-icon w-10 h-10 shrink-0">
+                        <cred.icon className="w-4 h-4" strokeWidth={1.5} />
+                      </div>
                       <div>
                         <h4 className="font-serif text-sm font-bold text-[oklch(0.9568_0.0119_79.78)]">
                           {cred.title}
                         </h4>
-                        <p className="font-sans text-xs text-[oklch(0.5_0.02_285)]">
+                        <p className="font-sans text-xs text-[oklch(0.5_0.01_260)]">
                           {cred.detail}
                         </p>
                       </div>
@@ -197,29 +181,23 @@ export function ExecutiveBioSection() {
               </div>
             </div>
 
-            {/* Monogram / Visual Block */}
+            {/* Monogram / Visual Block — Glassmorphism */}
             <div className="lg:col-span-4 order-1 lg:order-2">
-              <div className="relative bg-[oklch(0.2659_0.0559_254.82)] border border-[oklch(0.7432_0.1171_89.51_/_0.15)] aspect-[3/4] flex items-center justify-center">
-                {/* Icon mark as visual element */}
+              <div className="relative glass-card aspect-[3/4] flex items-center justify-center">
                 <div className="text-center">
                   <img
-                    src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-circle-logo_83362397.png"
+                    src={LOGO_CIRCLE}
                     alt=""
                     className="w-24 h-24 object-contain mx-auto opacity-20 mb-4"
                   />
-                  <span className="font-serif text-5xl font-bold text-[oklch(0.7432_0.1171_89.51_/_0.2)] leading-none block">
+                  <span className="font-serif text-5xl font-bold text-[oklch(0.7432_0.1171_89.51_/_0.25)] leading-none block">
                     NB
                   </span>
                   <div className="w-12 h-[1px] bg-[oklch(0.7432_0.1171_89.51_/_0.3)] mx-auto mt-4 mb-3" />
-                  <span className="font-sans text-[0.6rem] tracking-[0.25em] uppercase text-[oklch(0.5_0.02_285)]">
+                  <span className="font-sans text-[0.6rem] tracking-[0.25em] uppercase text-[oklch(0.5_0.01_260)]">
                     Executive CFO
                   </span>
                 </div>
-                {/* Corner accents */}
-                <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-[oklch(0.7432_0.1171_89.51_/_0.3)]" />
-                <div className="absolute top-3 right-3 w-6 h-6 border-t border-r border-[oklch(0.7432_0.1171_89.51_/_0.3)]" />
-                <div className="absolute bottom-3 left-3 w-6 h-6 border-b border-l border-[oklch(0.7432_0.1171_89.51_/_0.3)]" />
-                <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-[oklch(0.7432_0.1171_89.51_/_0.3)]" />
               </div>
             </div>
           </div>
