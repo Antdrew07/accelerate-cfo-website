@@ -1,6 +1,9 @@
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 
+const LOGO_ICON = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-icon-mark-9oQXfiLfCWcdBX6nMqvJnG.webp";
+const LOGO_WORDMARK = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-primary-dark-7zEKYmnGztiNkgphVHgQvn.png";
+
 const navLinks = [
   { label: "Services", href: "#services" },
   { label: "Why Us", href: "#why-us" },
@@ -29,14 +32,18 @@ export function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          {/* Logo */}
+          {/* Logo — icon mark + wordmark image */}
           <a href="#" className="flex items-center gap-3 group">
-            <span className="font-serif text-xl font-bold tracking-wide text-[oklch(0.97_0.008_85)]">
-              ACCELERATE
-            </span>
-            <span className="font-serif text-xl font-bold tracking-wide text-[oklch(0.75_0.12_85)]">
-              CFO
-            </span>
+            <img
+              src={LOGO_ICON}
+              alt="Accelerate CFO icon"
+              className="h-10 w-10 object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+            <img
+              src={LOGO_WORDMARK}
+              alt="Accelerate CFO"
+              className="h-6 object-contain hidden sm:block"
+            />
           </a>
 
           {/* Desktop Nav */}

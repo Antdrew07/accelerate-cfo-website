@@ -58,6 +58,15 @@ const BARRY_PHOTO = "https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/gi
 export function ExecutiveBioSection() {
   return (
     <section id="leadership" className="relative py-28 lg:py-36 bg-[oklch(0.06_0.015_260)] grain-overlay overflow-hidden">
+      {/* Brand pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-pattern-c8kwd3myRUP9zeadcbsnNo.webp)`,
+          backgroundSize: "500px 500px",
+          backgroundRepeat: "repeat",
+        }}
+      />
       <div className="relative z-10 max-w-6xl mx-auto px-6 lg:px-8">
         {/* Header */}
         <AnimatedSection className="mb-20">
@@ -191,9 +200,14 @@ export function ExecutiveBioSection() {
             {/* Monogram / Visual Block */}
             <div className="lg:col-span-4 order-1 lg:order-2">
               <div className="relative bg-[oklch(0.1_0.02_260)] border border-[oklch(0.75_0.12_85_/_0.15)] aspect-[3/4] flex items-center justify-center">
-                {/* Stylized monogram instead of photo */}
+                {/* Icon mark as visual element */}
                 <div className="text-center">
-                  <span className="font-serif text-7xl font-bold text-[oklch(0.75_0.12_85_/_0.15)] leading-none block">
+                  <img
+                    src="https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/logo-icon-mark-9oQXfiLfCWcdBX6nMqvJnG.webp"
+                    alt=""
+                    className="w-24 h-24 object-contain mx-auto opacity-20 mb-4"
+                  />
+                  <span className="font-serif text-5xl font-bold text-[oklch(0.75_0.12_85_/_0.2)] leading-none block">
                     NB
                   </span>
                   <div className="w-12 h-[1px] bg-[oklch(0.75_0.12_85_/_0.3)] mx-auto mt-4 mb-3" />

@@ -25,6 +25,15 @@ export function ContactSection() {
 
   return (
     <section id="contact" className="relative py-28 lg:py-36 bg-[oklch(0.04_0.01_260)] overflow-hidden">
+      {/* Brand pattern overlay */}
+      <div
+        className="absolute inset-0 opacity-[0.03] pointer-events-none"
+        style={{
+          backgroundImage: `url(https://d2xsxph8kpxj0f.cloudfront.net/310419663029617589/giAicM8DdHK2T5b4mXbReT/brand-pattern-c8kwd3myRUP9zeadcbsnNo.webp)`,
+          backgroundSize: "500px 500px",
+          backgroundRepeat: "repeat",
+        }}
+      />
       {/* Subtle gold gradient accent */}
       <div className="absolute top-0 left-0 right-0 h-[1px] bg-gradient-to-r from-transparent via-[oklch(0.75_0.12_85_/_0.5)] to-transparent" />
 
