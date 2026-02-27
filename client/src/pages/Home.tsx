@@ -1,25 +1,35 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { HeroSection } from "@/components/sections/HeroSection";
+import { ProblemSection } from "@/components/sections/ProblemSection";
+import { SolutionSection } from "@/components/sections/SolutionSection";
+import { ServiceLinesSection } from "@/components/sections/ServiceLinesSection";
+import { CFODeepDiveSection } from "@/components/sections/CFODeepDiveSection";
+import { TaxLegalSection } from "@/components/sections/TaxLegalSection";
+import { VenueRealEstateSection } from "@/components/sections/VenueRealEstateSection";
+import { DifferentiationSection } from "@/components/sections/DifferentiationSection";
+import { EngageSection } from "@/components/sections/EngageSection";
+import { ExecutiveBioSection } from "@/components/sections/ExecutiveBioSection";
+import { PromiseSection } from "@/components/sections/PromiseSection";
+import { ContactSection } from "@/components/sections/ContactSection";
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
-      <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
-      </main>
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      <HeroSection />
+      <ProblemSection />
+      <SolutionSection />
+      <ServiceLinesSection />
+      <CFODeepDiveSection />
+      <TaxLegalSection />
+      <VenueRealEstateSection />
+      <DifferentiationSection />
+      <EngageSection />
+      <ExecutiveBioSection />
+      <PromiseSection />
+      <ContactSection />
+      <Footer />
     </div>
   );
 }
